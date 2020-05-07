@@ -1,0 +1,271 @@
+﻿@model ERMA.Models.ReqDetail
+@using ERMA.App_Code
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    #txtProductDescription {
+        width: 940px !important;
+        max-width: 940px;
+        min-width: 360px;
+        height: 80px;
+    }
+</style>
+
+<h2>Create</h2>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Requisition Line Item Detail</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @if (!(Session["ReqError"] is null))
+        {
+            if (Session["ReqError"].ToString().Length > 0)
+            {
+                @Html.Label(Session["ReqError"].ToString(), htmlAttributes: new { @class = "text-danger" })
+            }
+        }
+        <div class="form-group">
+
+            <div class="col-md-12">
+
+                @Html.HiddenFor(model => model.RequisitionNumber)
+                @Html.HiddenFor(model => model.InventoryStockroom)
+                @Html.HiddenFor(model => model.MasterRequisitionNumber)
+                @Html.HiddenFor(model => model.CMSDatabase)
+                @Html.HiddenFor(model => model.ServLang)
+                @Html.HiddenFor(model => model.ServPlntCode)
+                @Html.HiddenFor(model => model.MasterRequisitionNbrSpecified)
+                @Html.HiddenFor(model => model.RequisitionNumberSpecified)
+                @Html.HiddenFor(model => model.QtyOrderedSpecified)
+                @Html.HiddenFor(model => model.RequestID)
+                @Html.HiddenFor(model => model.RequestMode)
+                @Html.HiddenFor(model => model.Buyer)
+                @Html.HiddenFor(model => model.Requisitioner)
+                @Html.HiddenFor(model => model.VendorCode, new { htmlAttributes= new {id = "txtVendorCode" }})
+
+            </div>
+        </div>
+
+
+        <div class="well">
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    @Html.LabelFor(model => model.RequiredDate, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+                </div>
+                <div class="col-md-3">
+                    @*@Html.EditorFor(model => model.RequiredDate, new { htmlAttributes = new { @class = "form-control", @Value = Model.RequiredDate.ToString("MM/dd/yyyy") } })*@
+                    @Html.EditorFor(model => model.RequiredDate, new { htmlAttributes = new { @class = "form-control date-picker", id="txtRequiredDate"} })
+                    @Html.ValidationMessageFor(model => model.RequiredDate, "", new { @class = "text-danger" })
+                </div>
+                @Html.LabelFor(model => model.DeptCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.DeptCode, new { htmlAttributes = new { @class = "form-control", id = "txtDept", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.DeptCode, "", new { @class = "text-danger" })
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    @Html.LabelFor(model => model.GlAccount, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+                </div>
+                <div class="col-md-3">
+                    @if (!(Model is null))
+                    {
+                        @Html.DropDownListFor(model => model.GlAccount, new SelectList(Model.GLAccountList, "Number", "Description"), htmlAttributes: new { @class = "form-control text-left", id = "lstGLAccount" })
+                    }
+                    @Html.ValidationMessageFor(model => model.GlAccount, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-2 text-right">
+                    @Html.LabelFor(model => model.VendorName, htmlAttributes: new { @class = "control-label" })
+                </div>
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.VendorName, new { htmlAttributes = new { @class = "form-control", id = "txtVendorName", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.VendorName, "", new { @class = "text-danger" })
+                    @*<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#getVendor">Select</button>*@
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    @Html.LabelFor(model => model.ProjectCode, htmlAttributes: new { @class = "control-label" })
+                </div>
+                <div class="col-md-3">
+                    @if (!(Model is null))
+                    {
+                        @Html.DropDownListFor(model => model.ProjectCode, new SelectList(Model.ProjectList, "Code", "Description"),"Select Project", htmlAttributes: new { @class = "form-control text-left", id = "lstProject" })
+                    }
+                    @*@Html.EditorFor(model => model.ProjectCode, new { htmlAttributes = new { @class = "form-control", @autofocus = "autofocus" } })*@
+                    @Html.ValidationMessageFor(model => model.ProjectCode, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-2 text-right">
+                    @Html.LabelFor(model => model.VendorCode, new { htmlAttributes = new { @class = "control-label" } })
+                </div>
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.VendorCode, new { htmlAttributes = new { @class = "form-control", id = "txtVendorCode", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.VendorCode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.VendorPartNumber, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-3">
+                @Html.EditorFor(model => model.VendorPartNumber, new { htmlAttributes = new { @class = "form-control", id="txtVendorPartNumber" } })
+                @Html.ValidationMessageFor(model => model.VendorPartNumber, "", new { @class = "text-danger" })
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#getVendorPart">Select</button>
+            </div>
+            @Html.LabelFor(model => model.TACPartNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.TACPartNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TACPartNumber, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.ProductDescription, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.ProductDescription, htmlAttributes: new { @class = "form-control", rows = "5", cols = "50", id = "txtProductDescription" })
+                @Html.ValidationMessageFor(model => model.ProductDescription, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.Qty, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-3">
+                @Html.EditorFor(model => model.Qty, new { htmlAttributes = new { @class = "form-control", id="liQty" } })
+                @Html.ValidationMessageFor(model => model.Qty, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.OrderUnit, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-5">
+
+                @if (!(Model is null))
+                {
+                    @Html.DropDownListFor(model => model.OrderUnit, new SelectList(Model.UoMList, "Code", "ListDisplay"), htmlAttributes: new { @class = "form-control text-left", id = "lstOrderUnit" })
+                }
+
+                @*@Html.EditorFor(model => model.OrderUnit, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.OrderUnit, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.PerUnitPrice, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-3">
+                @Html.EditorFor(model => model.PerUnitPrice, new { htmlAttributes = new { @class = "form-control", id="liUnitPrice" } })
+                @Html.ValidationMessageFor(model => model.PerUnitPrice, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.UnitOfMeasure, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-5">
+                @if (!(Model is null))
+                {
+                    @Html.DropDownListFor(model => model.UnitOfMeasure, new SelectList(Model.UoMList, "Code", "ListDisplay"), htmlAttributes: new { @class = "form-control text-left", id = "lstPriceUnit" })
+                }
+                @*@Html.EditorFor(model => model.UnitOfMeasure, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.UnitOfMeasure, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.TaxGroupCode, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-3">
+                @if (!(Model is null))
+                {
+                    @Html.DropDownListFor(model => model.TaxGroupCode, new SelectList(Model.TaxGroupList, "Code", "ListDisplay"), htmlAttributes: new { @class = "form-control text-left", id = "lstTaxGroup" })
+                }
+                        @*@Html.EditorFor(model => model.TaxGroupCode, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.TaxGroupCode, "", new { @class = "text-danger" })
+                    </div>
+            <div class="col-md-2 text-right">
+                @Html.LabelFor(model => model.TaxRate, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+            </div>
+            <div class="col-md-5">
+                @if (!(Model is null))
+                {
+                    @Html.DropDownListFor(model => model.TaxRate, new SelectList(Model.TaxRateList, "Code", "ListDisplay"), htmlAttributes: new { @class = "form-control text-left", id = "lstTaxRate" })
+                }
+                        @*@Html.EditorFor(model => model.TaxRate, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.TaxRate, "", new { @class = "text-danger" })
+
+                    </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" id="hideCreateReqLineItem">
+                <input type="submit" value="Create" class="btn btn-default" id="btnCreateReqLineItem" />
+            </div>
+        </div>
+    </div>
+
+
+    <div id="getVendorPart" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <h4 class="modal-title text-center">Search Vendor Part</h4>
+
+                <div class="modal-body">
+                    <p class="text-center" id="lblSearch">Type Search</p>
+                    <div class="row" id="lblSearchVendorPart">
+                        <input type="text" id="txtSearchVendorPart" class="form-control text-center col-lg-6 col-md-offset-3" />
+                    </div>
+                    <div>
+                        <br />
+                        <div class="row">
+                            <p class="text-center">Results</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            @if (!(Model is null))
+                            {
+                                @Html.DropDownListFor(model => model.SelectedVendorPart, new SelectList(Model.VendorPartList, "PartNumber", "Description"), htmlAttributes: new { @class = "form-control text-left col-lg-6, col-md-offset-3", id = "lstVendorPartSearchResults", size = "8" })
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnSelectVendorPart" class="btn btn-default" data-dismiss="modal">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<div>
+    @Html.ActionLink("Back to Requisition line Item", "Index")
+</div>
+

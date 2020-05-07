@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <h2>@Html.Label("Requisition Line Item", new { id = "RequisitionDetailTitle" })</h2>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-lg-2">
+        <input id="btnAddReqDetail" class="btn btn-primary" style="width:225px;" type="button" value="Add Requisition Line Item" onclick="location.href='@Url.Action("Create", "ReqDetail")'" /><br /><br />
+        @*<input id="btnHome" class="btn btn-info" style="width:225px;" type="button" value="Finish Later" onclick="location.href='@Url.Action("Index", "Home")'" /><br /><br />*@
+        <input id="btnSubmit" class="btn btn-primary" style="width:225px;" type="button" value="Submit for Approval" onclick="location.href='@Url.Action("SubmitReqSupervisor", "Route")'" />
+
+    </div>
+    <div class="col-lg-10">
+        <p>@ViewBag.ReqMsg</p>
+    </div>
+</div>

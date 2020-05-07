@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ERMA.Models.RouteViewModel.VMMasterRequisition>
+
+@{
+    ViewBag.Title = "Approval Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    WebGrid webGrid = new WebGrid(source: Model, canSort: false, canPage: false);
+}
+<style lang="en-us">
+    .first-col-width {
+        width: 50px;
+    }
+    .action-col-width{
+        width: 400px;
+    }
+    .save-approval{}
+</style>
+<h2>Requisitions for Approval</h2>
+<div class="form-inline radio-inline"></div>
+@webGrid.GetHtml(
+    htmlAttributes: new { @id = "WebGrid", @class = "Grid", @style = "width:100%" },
+    columns: webGrid.Columns(
+        webGrid.Column(null, null, format: @<text><img src="~/Image/plus.png" /><div style="display:none;"></div></text>, style: "first-col-width"),
+                                            webGrid.Column("VmMasterRequisition.MasterReqID", "Master Req ID"),
+                                            webGrid.Column("VmMasterRequisition.Description1", "Description"),
+                                            webGrid.Column("VmMasterRequisition.RequisitionerUserName", "Requisitioner"),
+                                            webGrid.Column("TotalWithoutTaxes", format: (item3) => new HtmlString(string.Format("{0:C}", item3.TotalWithoutTaxes)), header: "Total w/o Tax"),
+                                            webGrid.Column(format: (item) =>
+                                            {
+                                                WebGrid childGrid = new WebGrid(source: item.ForApprovalLineItem, canSort: false, canPage: false);
+                                                return childGrid.GetHtml(
+                                                    htmlAttributes: new { @class = "ChildGrid" },
+                                                    columns: childGrid.Columns(
+                                                        childGrid.Column("RequisitionLineItem.RequisitionNumber", "Requisition #"),
+                                                        childGrid.Column("RequisitionLineItem.VendorName", "Vendor Name"),
+                                                        childGrid.Column("RequisitionLineItem.VendorPartNumber", "Vendor Part #"),
+
+                                                        childGrid.Column("RequisitionLineItem.ProjectCode", "Project Code"),
+                                                        //childGrid.Column(header: "Project Code", format: (item2) => new HtmlString("<input type='text' value= '" + item2.RequisitionLineItem.ProjectCode + "' />")),
+                                                        childGrid.Column("RequisitionLineItem.GlAccount", "GL Account"),
+                                                        //childGrid.Column(header: "GL Account", format: (item2) => new HtmlString("<input type='text' value='" + item2.RequisitionLineItem.GlAccount + "' />")),
+                                                        childGrid.Column("RequisitionLineItem.RequiredDate", format: (item2) => new HtmlString(string.Format("{0:dd/MM/yyyy}", item2.RequisitionLineItem.RequiredDate)), header: "Required Date"),
+                                                        childGrid.Column("RequisitionLineItem.Qty", "Qty"),
+                                                        childGrid.Column("RequisitionLineItem.UnitOfMeasure", "UoM"),
+                                                        childGrid.Column("RequisitionLineItem.PerUnitPrice", format: (item2) => new HtmlString(string.Format("{0:C}", item2.RequisitionLineItem.PerUnitPrice)), header: "Unit Price"),
+                                                        childGrid.Column("RequisitionLineItem.LineTotal", format: (item2) => new HtmlString(string.Format("{0:C}", item2.RequisitionLineItem.LineTotal)), header: "Line Total"),
+
+                                                        childGrid.Column(null, header:"Action / Reason", format: (item2) => new HtmlString("<input type='radio' name='approvalGroup" + item2.RequisitionLineItem.RequisitionNumber + "' value='Approve' " + item2.RequisitionLineItem.Disabled + " " + item2.PendingApproval.ApprovedChecked + " />&nbsp;Approve&nbsp;&nbsp;<input type='radio' name='approvalGroup" + item2.RequisitionLineItem.RequisitionNumber + "' value='Deny' " + item2.RequisitionLineItem.Disabled + " " + item2.PendingApproval.DeniedChecked + " />&nbsp;Deny  &nbsp;&nbsp; <input type='text' id='denyreason" + item2.RequisitionLineItem.RequisitionNumber + "' name='denyreason" + item2.RequisitionLineItem.RequisitionNumber + "' value='" + item2.PendingApproval.RejectReason + "' " + item2.RequisitionLineItem.Disabled + " />&nbsp;<button class='save-approval' name='bnApprove" + item2.RequisitionLineItem.RequisitionNumber + "' " + item2.RequisitionLineItem.Disabled + ">Submit</button>"), style: "action-col-width")
+
+                                            ));
+
+                                            })
+
+))
+
+

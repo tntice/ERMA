@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<div class="row"><div class="col-lg-12">&nbsp;</div></div>*@
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <h2>@Html.Label("Requisitions", new { id = "RequisitionTitle" })</h2>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-lg-2">
+        <input id="btnAddMasterReq" type="button" value="Add" onclick="location.href='@Url.Action("Create", "MReq")'" />
+    </div>
+    <div class="col-lg-10">
+        <p>@ViewBag.MasterReqMsg</p>
+    </div>
+</div>
+

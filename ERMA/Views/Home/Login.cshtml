@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPageLogOn.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2">&nbsp;</div>
+        <div class="col-lg-8">
+            <h2 class="text-center">Login</h2>
+        </div>
+        <div class="col-lg-2">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">&nbsp;</div>
+        <div class="col-lg-8">
+            &nbsp;
+        </div>
+        <div class="col-lg-2">&nbsp;</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">&nbsp;</div>
+        <div class="col-lg-8">
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <p>User Name:</p>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="txtUserName" name="txtUserName" type="text" autofocus />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <p>Password:</p>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="txtPassword" name="txtPassword" type="password" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <input type="submit" value="Login" class="btn btn-default" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center alert-danger">
+                        <p id="message" name="message">@ViewBag.ErrorMessage</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-lg-2">&nbsp;</div>
+    </div>
+</div>
+
+
+

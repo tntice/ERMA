@@ -1,0 +1,3592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xsdns="http://webservices.solarsoft.com/ivp/xsd/ivpwsPD001" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://webservices.solarsoft.com/ivp" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://webservices.solarsoft.com/ivp" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>ivpwsPD001</wsdl:documentation>
+  <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservices.solarsoft.com/ivp/xsd/ivpwsPD001">
+      <xs:include schemaLocation="http://172.16.1.51:8080/iVPWebServices/services/ivpwsPD001?xsd=ivpwsPD001.xsd" />
+      <xs:element name="AddFirmPlannedOrder">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddFirmPlannedOrder" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddFirmPlannedOrderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddFirmPlannedOrder" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMasterBolDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMasterBolDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMasterBolDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMasterBolHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMasterBolHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMasterBolHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddMasterBolHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodMaterial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodMaterial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodMaterialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodOSRoutingDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodOSRoutingDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodOSRoutingDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodPartSequenceUomConversion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodPartSequenceUomConversion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodPartSequenceUomConversionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodRouting">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodRouting" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodRoutingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodRoutingOperationDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodRoutingOperationDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodRoutingOperationDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodRoutingOperationDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodRoutingOperationDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodRoutingOperationDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodScrapProfile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodScrapProfile" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodScrapProfileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodTool">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddMethodTool" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMethodToolResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddNewReportingBatch">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddNewReportingBatch" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddNewReportingBatchResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddNewReportingBatch" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddProdFamily">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddProdFamily" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddProdFamilyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddProdFamilyComponent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddProdFamilyComponent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddProdFamilyComponentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddToolMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddToolMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddToolMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMasterBolDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMasterBolDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMasterBolDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMasterBolHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMasterBolHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMasterBolHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodMaterial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodMaterial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodMaterialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodOSRoutingDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodOSRoutingDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodOSRoutingDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodPartSequenceUomConversion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodPartSequenceUomConversion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodPartSequenceUomConversionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodRouting">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodRouting" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodRoutingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodRoutingOperationDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodRoutingOperationDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodRoutingOperationDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodRoutingOperationDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodRoutingOperationDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodRoutingOperationDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodScrapProfile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodScrapProfile" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodScrapProfileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodTool">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteMethodTool" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMethodToolResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteProdFamily">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteProdFamily" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteProdFamilyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteProdFamilyComponent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteProdFamilyComponent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteProdFamilyComponentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteToolMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteToolMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteToolMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMasterBolDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMasterBolDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMasterBolDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMasterBolDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMasterBolHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMasterBolHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMasterBolHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMasterBolHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodMaterial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodMaterial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodMaterialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodMaterial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodOSRoutingDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodOSRoutingDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodOSRoutingDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodOSRoutingDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodPartSequenceUomConversion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodPartSequenceUomConversion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodPartSequenceUomConversionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodPartSequenceUomConversion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodRouting">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodRouting" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodRoutingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodRouting" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodRoutingOperationDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodRoutingOperationDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodRoutingOperationDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodRoutingOperationDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodRoutingOperationDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodRoutingOperationDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodRoutingOperationDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodRoutingOperationDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodScrapProfile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodScrapProfile" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodScrapProfileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodScrapProfile" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodTool">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireMethodTool" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireMethodToolResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireMethodTool" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProdFamily">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireProdFamily" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProdFamilyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireProdFamily" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProdFamilyComponent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireProdFamilyComponent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProdFamilyComponentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireProdFamilyComponent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireToolMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireToolMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireToolMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireToolMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PartReportingCreateSerial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_PartReportingCreateSerial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PartReportingCreateSerialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PerformSerializedInventoryDowngrade">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_PerformSerializedInventoryDowngrade" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PerformSerializedInventoryDowngradeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecreateOneRepetitiveEntry">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_RecreateOneRepetitiveEntry" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecreateOneRepetitiveEntryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMasterBolDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMasterBolDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMasterBolDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMasterBolHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMasterBolHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMasterBolHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodMaterial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodMaterial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodMaterialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodOSRoutingDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodOSRoutingDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodOSRoutingDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodPartSequenceUomConversion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodPartSequenceUomConversion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodPartSequenceUomConversionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodRouting">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodRouting" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodRoutingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodRoutingOperationDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodRoutingOperationDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodRoutingOperationDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodRoutingOperationDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodRoutingOperationDetail" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodRoutingOperationDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodScrapProfile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodScrapProfile" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodScrapProfileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodTool">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateMethodTool" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMethodToolResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateProdFamily">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateProdFamily" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateProdFamilyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateProdFamilyComponent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateProdFamilyComponent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateProdFamilyComponentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateToolMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateToolMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateToolMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ServerFaultResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Service_InquireMethodRoutingOperationDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodRoutingOperationDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodRoutingOperationDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodRoutingOperationDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServerFault">
+    <wsdl:part name="detail" element="xsdns:ServerFaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateToolMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateToolMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateToolMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateToolMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodMaterial_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodMaterial" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodMaterial_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodScrapProfile_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodScrapProfile" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodScrapProfile_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodScrapProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodTool_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodTool" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodTool_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodPartSequenceUomConversion_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodPartSequenceUomConversion" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodPartSequenceUomConversion_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodPartSequenceUomConversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddProdFamilyComponent_Request">
+    <wsdl:part name="parameters" element="xsdns:AddProdFamilyComponent" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddProdFamilyComponent_Response">
+    <wsdl:part name="parameters" element="xsdns:AddProdFamilyComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodRoutingOperationDescription_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodRoutingOperationDescription" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodRoutingOperationDescription_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodRoutingOperationDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodTool_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodTool" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodTool_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodRouting_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodRouting" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodRouting_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodRoutingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateProdFamilyComponent_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateProdFamilyComponent" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateProdFamilyComponent_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateProdFamilyComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMasterBolHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMasterBolHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMasterBolHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMasterBolHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodOSRoutingDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodOSRoutingDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodOSRoutingDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodOSRoutingDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodRoutingOperationDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodRoutingOperationDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodRoutingOperationDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodRoutingOperationDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMasterBolHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMasterBolHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMasterBolHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMasterBolHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodPartSequenceUomConversion_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodPartSequenceUomConversion" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodPartSequenceUomConversion_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodPartSequenceUomConversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodRouting_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodRouting" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodRouting_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodRoutingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodMaterial_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodMaterial" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodMaterial_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodTool_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodTool" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodTool_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodOSRoutingDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodOSRoutingDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodOSRoutingDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodOSRoutingDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateProdFamily_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateProdFamily" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateProdFamily_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateProdFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMasterBolHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMasterBolHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMasterBolHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMasterBolHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodOSRoutingDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodOSRoutingDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodOSRoutingDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodOSRoutingDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddToolMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:AddToolMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddToolMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:AddToolMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodRoutingOperationDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodRoutingOperationDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodRoutingOperationDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodRoutingOperationDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteProdFamily_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteProdFamily" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteProdFamily_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteProdFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodPartSequenceUomConversion_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodPartSequenceUomConversion" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodPartSequenceUomConversion_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodPartSequenceUomConversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodRoutingOperationDescription_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodRoutingOperationDescription" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodRoutingOperationDescription_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodRoutingOperationDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteToolMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteToolMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteToolMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteToolMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodMaterial_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodMaterial" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodMaterial_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodScrapProfile_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodScrapProfile" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodScrapProfile_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodScrapProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodRoutingOperationDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodRoutingOperationDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodRoutingOperationDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodRoutingOperationDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteProdFamilyComponent_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteProdFamilyComponent" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteProdFamilyComponent_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteProdFamilyComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_PartReportingCreateSerial_Request">
+    <wsdl:part name="parameters" element="xsdns:PartReportingCreateSerial" />
+  </wsdl:message>
+  <wsdl:message name="Service_PartReportingCreateSerial_Response">
+    <wsdl:part name="parameters" element="xsdns:PartReportingCreateSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodRoutingOperationDescription_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodRoutingOperationDescription" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodRoutingOperationDescription_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodRoutingOperationDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodScrapProfile_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodScrapProfile" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMethodScrapProfile_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMethodScrapProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodRoutingOperationDescription_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodRoutingOperationDescription" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodRoutingOperationDescription_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodRoutingOperationDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_PerformSerializedInventoryDowngrade_Request">
+    <wsdl:part name="parameters" element="xsdns:PerformSerializedInventoryDowngrade" />
+  </wsdl:message>
+  <wsdl:message name="Service_PerformSerializedInventoryDowngrade_Response">
+    <wsdl:part name="parameters" element="xsdns:PerformSerializedInventoryDowngradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddNewReportingBatch_Request">
+    <wsdl:part name="parameters" element="xsdns:AddNewReportingBatch" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddNewReportingBatch_Response">
+    <wsdl:part name="parameters" element="xsdns:AddNewReportingBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMasterBolHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMasterBolHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMasterBolHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMasterBolHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodTool_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodTool" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodTool_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMasterBolDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMasterBolDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMasterBolDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMasterBolDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMasterBolDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireMasterBolDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireMasterBolDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireMasterBolDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodOSRoutingDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodOSRoutingDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodOSRoutingDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodOSRoutingDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMasterBolDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMasterBolDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMasterBolDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMasterBolDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireProdFamily_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireProdFamily" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireProdFamily_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireProdFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodRouting_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodRouting" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodRouting_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodRoutingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireProdFamilyComponent_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireProdFamilyComponent" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireProdFamilyComponent_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireProdFamilyComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMasterBolDetail_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMasterBolDetail" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMasterBolDetail_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMasterBolDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodMaterial_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodMaterial" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodMaterial_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodScrapProfile_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodScrapProfile" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateMethodScrapProfile_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateMethodScrapProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireToolMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireToolMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireToolMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireToolMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddFirmPlannedOrder_Request">
+    <wsdl:part name="parameters" element="xsdns:AddFirmPlannedOrder" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddFirmPlannedOrder_Response">
+    <wsdl:part name="parameters" element="xsdns:AddFirmPlannedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_RecreateOneRepetitiveEntry_Request">
+    <wsdl:part name="parameters" element="xsdns:RecreateOneRepetitiveEntry" />
+  </wsdl:message>
+  <wsdl:message name="Service_RecreateOneRepetitiveEntry_Response">
+    <wsdl:part name="parameters" element="xsdns:RecreateOneRepetitiveEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddProdFamily_Request">
+    <wsdl:part name="parameters" element="xsdns:AddProdFamily" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddProdFamily_Response">
+    <wsdl:part name="parameters" element="xsdns:AddProdFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodRouting_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodRouting" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteMethodRouting_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteMethodRoutingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodPartSequenceUomConversion_Request">
+    <wsdl:part name="parameters" element="xsdns:AddMethodPartSequenceUomConversion" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddMethodPartSequenceUomConversion_Response">
+    <wsdl:part name="parameters" element="xsdns:AddMethodPartSequenceUomConversionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ivpwsPD001PortType">
+    <wsdl:operation name="InquireMethodRoutingOperationDetail">
+      <wsdl:input wsaw:Action="urn:InquireMethodRoutingOperationDetail" message="ns:Service_InquireMethodRoutingOperationDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodRoutingOperationDetail_Response" message="ns:Service_InquireMethodRoutingOperationDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodRoutingOperationDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToolMaster">
+      <wsdl:input wsaw:Action="urn:UpdateToolMaster" message="ns:Service_UpdateToolMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateToolMaster_Response" message="ns:Service_UpdateToolMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateToolMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodMaterial">
+      <wsdl:input wsaw:Action="urn:AddMethodMaterial" message="ns:Service_AddMethodMaterial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodMaterial_Response" message="ns:Service_AddMethodMaterial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodMaterial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodScrapProfile">
+      <wsdl:input wsaw:Action="urn:DeleteMethodScrapProfile" message="ns:Service_DeleteMethodScrapProfile_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodScrapProfile_Response" message="ns:Service_DeleteMethodScrapProfile_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodScrapProfile_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodTool">
+      <wsdl:input wsaw:Action="urn:AddMethodTool" message="ns:Service_AddMethodTool_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodTool_Response" message="ns:Service_AddMethodTool_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodTool_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodPartSequenceUomConversion">
+      <wsdl:input wsaw:Action="urn:DeleteMethodPartSequenceUomConversion" message="ns:Service_DeleteMethodPartSequenceUomConversion_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodPartSequenceUomConversion_Response" message="ns:Service_DeleteMethodPartSequenceUomConversion_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodPartSequenceUomConversion_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamilyComponent">
+      <wsdl:input wsaw:Action="urn:AddProdFamilyComponent" message="ns:Service_AddProdFamilyComponent_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddProdFamilyComponent_Response" message="ns:Service_AddProdFamilyComponent_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddProdFamilyComponent_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRoutingOperationDescription">
+      <wsdl:input wsaw:Action="urn:InquireMethodRoutingOperationDescription" message="ns:Service_InquireMethodRoutingOperationDescription_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodRoutingOperationDescription_Response" message="ns:Service_InquireMethodRoutingOperationDescription_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodRoutingOperationDescription_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodTool">
+      <wsdl:input wsaw:Action="urn:InquireMethodTool" message="ns:Service_InquireMethodTool_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodTool_Response" message="ns:Service_InquireMethodTool_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodTool_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRouting">
+      <wsdl:input wsaw:Action="urn:InquireMethodRouting" message="ns:Service_InquireMethodRouting_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodRouting_Response" message="ns:Service_InquireMethodRouting_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodRouting_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodHeader">
+      <wsdl:input wsaw:Action="urn:InquireMethodHeader" message="ns:Service_InquireMethodHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodHeader_Response" message="ns:Service_InquireMethodHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodHeader">
+      <wsdl:input wsaw:Action="urn:DeleteMethodHeader" message="ns:Service_DeleteMethodHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodHeader_Response" message="ns:Service_DeleteMethodHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamilyComponent">
+      <wsdl:input wsaw:Action="urn:UpdateProdFamilyComponent" message="ns:Service_UpdateProdFamilyComponent_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateProdFamilyComponent_Response" message="ns:Service_UpdateProdFamilyComponent_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateProdFamilyComponent_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolHeader">
+      <wsdl:input wsaw:Action="urn:InquireMasterBolHeader" message="ns:Service_InquireMasterBolHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMasterBolHeader_Response" message="ns:Service_InquireMasterBolHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMasterBolHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodOSRoutingDetail">
+      <wsdl:input wsaw:Action="urn:DeleteMethodOSRoutingDetail" message="ns:Service_DeleteMethodOSRoutingDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodOSRoutingDetail_Response" message="ns:Service_DeleteMethodOSRoutingDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodOSRoutingDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDetail">
+      <wsdl:input wsaw:Action="urn:AddMethodRoutingOperationDetail" message="ns:Service_AddMethodRoutingOperationDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodRoutingOperationDetail_Response" message="ns:Service_AddMethodRoutingOperationDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodRoutingOperationDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodHeader">
+      <wsdl:input wsaw:Action="urn:AddMethodHeader" message="ns:Service_AddMethodHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodHeader_Response" message="ns:Service_AddMethodHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolHeader">
+      <wsdl:input wsaw:Action="urn:AddMasterBolHeader" message="ns:Service_AddMasterBolHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMasterBolHeader_Response" message="ns:Service_AddMasterBolHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMasterBolHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodPartSequenceUomConversion">
+      <wsdl:input wsaw:Action="urn:UpdateMethodPartSequenceUomConversion" message="ns:Service_UpdateMethodPartSequenceUomConversion_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodPartSequenceUomConversion_Response" message="ns:Service_UpdateMethodPartSequenceUomConversion_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodPartSequenceUomConversion_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRouting">
+      <wsdl:input wsaw:Action="urn:UpdateMethodRouting" message="ns:Service_UpdateMethodRouting_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodRouting_Response" message="ns:Service_UpdateMethodRouting_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodRouting_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodMaterial">
+      <wsdl:input wsaw:Action="urn:InquireMethodMaterial" message="ns:Service_InquireMethodMaterial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodMaterial_Response" message="ns:Service_InquireMethodMaterial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodMaterial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodTool">
+      <wsdl:input wsaw:Action="urn:DeleteMethodTool" message="ns:Service_DeleteMethodTool_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodTool_Response" message="ns:Service_DeleteMethodTool_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodTool_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodOSRoutingDetail">
+      <wsdl:input wsaw:Action="urn:UpdateMethodOSRoutingDetail" message="ns:Service_UpdateMethodOSRoutingDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodOSRoutingDetail_Response" message="ns:Service_UpdateMethodOSRoutingDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodOSRoutingDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamily">
+      <wsdl:input wsaw:Action="urn:UpdateProdFamily" message="ns:Service_UpdateProdFamily_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateProdFamily_Response" message="ns:Service_UpdateProdFamily_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateProdFamily_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolHeader">
+      <wsdl:input wsaw:Action="urn:UpdateMasterBolHeader" message="ns:Service_UpdateMasterBolHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMasterBolHeader_Response" message="ns:Service_UpdateMasterBolHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMasterBolHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodOSRoutingDetail">
+      <wsdl:input wsaw:Action="urn:InquireMethodOSRoutingDetail" message="ns:Service_InquireMethodOSRoutingDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodOSRoutingDetail_Response" message="ns:Service_InquireMethodOSRoutingDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodOSRoutingDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToolMaster">
+      <wsdl:input wsaw:Action="urn:AddToolMaster" message="ns:Service_AddToolMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddToolMaster_Response" message="ns:Service_AddToolMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddToolMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDetail">
+      <wsdl:input wsaw:Action="urn:DeleteMethodRoutingOperationDetail" message="ns:Service_DeleteMethodRoutingOperationDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodRoutingOperationDetail_Response" message="ns:Service_DeleteMethodRoutingOperationDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodRoutingOperationDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamily">
+      <wsdl:input wsaw:Action="urn:DeleteProdFamily" message="ns:Service_DeleteProdFamily_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteProdFamily_Response" message="ns:Service_DeleteProdFamily_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteProdFamily_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodPartSequenceUomConversion">
+      <wsdl:input wsaw:Action="urn:InquireMethodPartSequenceUomConversion" message="ns:Service_InquireMethodPartSequenceUomConversion_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodPartSequenceUomConversion_Response" message="ns:Service_InquireMethodPartSequenceUomConversion_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodPartSequenceUomConversion_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDescription">
+      <wsdl:input wsaw:Action="urn:UpdateMethodRoutingOperationDescription" message="ns:Service_UpdateMethodRoutingOperationDescription_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodRoutingOperationDescription_Response" message="ns:Service_UpdateMethodRoutingOperationDescription_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodRoutingOperationDescription_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodHeader">
+      <wsdl:input wsaw:Action="urn:UpdateMethodHeader" message="ns:Service_UpdateMethodHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodHeader_Response" message="ns:Service_UpdateMethodHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToolMaster">
+      <wsdl:input wsaw:Action="urn:DeleteToolMaster" message="ns:Service_DeleteToolMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteToolMaster_Response" message="ns:Service_DeleteToolMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteToolMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodMaterial">
+      <wsdl:input wsaw:Action="urn:UpdateMethodMaterial" message="ns:Service_UpdateMethodMaterial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodMaterial_Response" message="ns:Service_UpdateMethodMaterial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodMaterial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodScrapProfile">
+      <wsdl:input wsaw:Action="urn:AddMethodScrapProfile" message="ns:Service_AddMethodScrapProfile_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodScrapProfile_Response" message="ns:Service_AddMethodScrapProfile_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodScrapProfile_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDetail">
+      <wsdl:input wsaw:Action="urn:UpdateMethodRoutingOperationDetail" message="ns:Service_UpdateMethodRoutingOperationDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodRoutingOperationDetail_Response" message="ns:Service_UpdateMethodRoutingOperationDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodRoutingOperationDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamilyComponent">
+      <wsdl:input wsaw:Action="urn:DeleteProdFamilyComponent" message="ns:Service_DeleteProdFamilyComponent_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteProdFamilyComponent_Response" message="ns:Service_DeleteProdFamilyComponent_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteProdFamilyComponent_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="PartReportingCreateSerial">
+      <wsdl:input wsaw:Action="urn:PartReportingCreateSerial" message="ns:Service_PartReportingCreateSerial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_PartReportingCreateSerial_Response" message="ns:Service_PartReportingCreateSerial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_PartReportingCreateSerial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDescription">
+      <wsdl:input wsaw:Action="urn:DeleteMethodRoutingOperationDescription" message="ns:Service_DeleteMethodRoutingOperationDescription_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodRoutingOperationDescription_Response" message="ns:Service_DeleteMethodRoutingOperationDescription_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodRoutingOperationDescription_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodScrapProfile">
+      <wsdl:input wsaw:Action="urn:InquireMethodScrapProfile" message="ns:Service_InquireMethodScrapProfile_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMethodScrapProfile_Response" message="ns:Service_InquireMethodScrapProfile_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMethodScrapProfile_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDescription">
+      <wsdl:input wsaw:Action="urn:AddMethodRoutingOperationDescription" message="ns:Service_AddMethodRoutingOperationDescription_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodRoutingOperationDescription_Response" message="ns:Service_AddMethodRoutingOperationDescription_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodRoutingOperationDescription_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformSerializedInventoryDowngrade">
+      <wsdl:input wsaw:Action="urn:PerformSerializedInventoryDowngrade" message="ns:Service_PerformSerializedInventoryDowngrade_Request" />
+      <wsdl:output wsaw:Action="urn:Service_PerformSerializedInventoryDowngrade_Response" message="ns:Service_PerformSerializedInventoryDowngrade_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_PerformSerializedInventoryDowngrade_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReportingBatch">
+      <wsdl:input wsaw:Action="urn:AddNewReportingBatch" message="ns:Service_AddNewReportingBatch_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddNewReportingBatch_Response" message="ns:Service_AddNewReportingBatch_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddNewReportingBatch_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolHeader">
+      <wsdl:input wsaw:Action="urn:DeleteMasterBolHeader" message="ns:Service_DeleteMasterBolHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMasterBolHeader_Response" message="ns:Service_DeleteMasterBolHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMasterBolHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodTool">
+      <wsdl:input wsaw:Action="urn:UpdateMethodTool" message="ns:Service_UpdateMethodTool_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodTool_Response" message="ns:Service_UpdateMethodTool_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodTool_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolDetail">
+      <wsdl:input wsaw:Action="urn:AddMasterBolDetail" message="ns:Service_AddMasterBolDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMasterBolDetail_Response" message="ns:Service_AddMasterBolDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMasterBolDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolDetail">
+      <wsdl:input wsaw:Action="urn:InquireMasterBolDetail" message="ns:Service_InquireMasterBolDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireMasterBolDetail_Response" message="ns:Service_InquireMasterBolDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireMasterBolDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodOSRoutingDetail">
+      <wsdl:input wsaw:Action="urn:AddMethodOSRoutingDetail" message="ns:Service_AddMethodOSRoutingDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodOSRoutingDetail_Response" message="ns:Service_AddMethodOSRoutingDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodOSRoutingDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolDetail">
+      <wsdl:input wsaw:Action="urn:UpdateMasterBolDetail" message="ns:Service_UpdateMasterBolDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMasterBolDetail_Response" message="ns:Service_UpdateMasterBolDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMasterBolDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamily">
+      <wsdl:input wsaw:Action="urn:InquireProdFamily" message="ns:Service_InquireProdFamily_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireProdFamily_Response" message="ns:Service_InquireProdFamily_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireProdFamily_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRouting">
+      <wsdl:input wsaw:Action="urn:AddMethodRouting" message="ns:Service_AddMethodRouting_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodRouting_Response" message="ns:Service_AddMethodRouting_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodRouting_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamilyComponent">
+      <wsdl:input wsaw:Action="urn:InquireProdFamilyComponent" message="ns:Service_InquireProdFamilyComponent_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireProdFamilyComponent_Response" message="ns:Service_InquireProdFamilyComponent_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireProdFamilyComponent_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolDetail">
+      <wsdl:input wsaw:Action="urn:DeleteMasterBolDetail" message="ns:Service_DeleteMasterBolDetail_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMasterBolDetail_Response" message="ns:Service_DeleteMasterBolDetail_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMasterBolDetail_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodMaterial">
+      <wsdl:input wsaw:Action="urn:DeleteMethodMaterial" message="ns:Service_DeleteMethodMaterial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodMaterial_Response" message="ns:Service_DeleteMethodMaterial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodMaterial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodScrapProfile">
+      <wsdl:input wsaw:Action="urn:UpdateMethodScrapProfile" message="ns:Service_UpdateMethodScrapProfile_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateMethodScrapProfile_Response" message="ns:Service_UpdateMethodScrapProfile_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateMethodScrapProfile_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireToolMaster">
+      <wsdl:input wsaw:Action="urn:InquireToolMaster" message="ns:Service_InquireToolMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireToolMaster_Response" message="ns:Service_InquireToolMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireToolMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFirmPlannedOrder">
+      <wsdl:input wsaw:Action="urn:AddFirmPlannedOrder" message="ns:Service_AddFirmPlannedOrder_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddFirmPlannedOrder_Response" message="ns:Service_AddFirmPlannedOrder_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddFirmPlannedOrder_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="RecreateOneRepetitiveEntry">
+      <wsdl:input wsaw:Action="urn:RecreateOneRepetitiveEntry" message="ns:Service_RecreateOneRepetitiveEntry_Request" />
+      <wsdl:output wsaw:Action="urn:Service_RecreateOneRepetitiveEntry_Response" message="ns:Service_RecreateOneRepetitiveEntry_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_RecreateOneRepetitiveEntry_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamily">
+      <wsdl:input wsaw:Action="urn:AddProdFamily" message="ns:Service_AddProdFamily_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddProdFamily_Response" message="ns:Service_AddProdFamily_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddProdFamily_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRouting">
+      <wsdl:input wsaw:Action="urn:DeleteMethodRouting" message="ns:Service_DeleteMethodRouting_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteMethodRouting_Response" message="ns:Service_DeleteMethodRouting_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteMethodRouting_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodPartSequenceUomConversion">
+      <wsdl:input wsaw:Action="urn:AddMethodPartSequenceUomConversion" message="ns:Service_AddMethodPartSequenceUomConversion_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddMethodPartSequenceUomConversion_Response" message="ns:Service_AddMethodPartSequenceUomConversion_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddMethodPartSequenceUomConversion_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ivpwsPD001Soap11Binding" type="ns:ivpwsPD001PortType">
+    <wsp:PolicyReference URI="#UsernameToken" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InquireMethodRoutingOperationDetail">
+      <soap:operation soapAction="urn:InquireMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToolMaster">
+      <soap:operation soapAction="urn:UpdateToolMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodMaterial">
+      <soap:operation soapAction="urn:AddMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodScrapProfile">
+      <soap:operation soapAction="urn:DeleteMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodTool">
+      <soap:operation soapAction="urn:AddMethodTool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodPartSequenceUomConversion">
+      <soap:operation soapAction="urn:DeleteMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamilyComponent">
+      <soap:operation soapAction="urn:AddProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRoutingOperationDescription">
+      <soap:operation soapAction="urn:InquireMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodTool">
+      <soap:operation soapAction="urn:InquireMethodTool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRouting">
+      <soap:operation soapAction="urn:InquireMethodRouting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodHeader">
+      <soap:operation soapAction="urn:InquireMethodHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodHeader">
+      <soap:operation soapAction="urn:DeleteMethodHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamilyComponent">
+      <soap:operation soapAction="urn:UpdateProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolHeader">
+      <soap:operation soapAction="urn:InquireMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodOSRoutingDetail">
+      <soap:operation soapAction="urn:DeleteMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDetail">
+      <soap:operation soapAction="urn:AddMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodHeader">
+      <soap:operation soapAction="urn:AddMethodHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolHeader">
+      <soap:operation soapAction="urn:AddMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodPartSequenceUomConversion">
+      <soap:operation soapAction="urn:UpdateMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRouting">
+      <soap:operation soapAction="urn:UpdateMethodRouting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodMaterial">
+      <soap:operation soapAction="urn:InquireMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodTool">
+      <soap:operation soapAction="urn:DeleteMethodTool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodOSRoutingDetail">
+      <soap:operation soapAction="urn:UpdateMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamily">
+      <soap:operation soapAction="urn:UpdateProdFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolHeader">
+      <soap:operation soapAction="urn:UpdateMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodOSRoutingDetail">
+      <soap:operation soapAction="urn:InquireMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddToolMaster">
+      <soap:operation soapAction="urn:AddToolMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDetail">
+      <soap:operation soapAction="urn:DeleteMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamily">
+      <soap:operation soapAction="urn:DeleteProdFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodPartSequenceUomConversion">
+      <soap:operation soapAction="urn:InquireMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDescription">
+      <soap:operation soapAction="urn:UpdateMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodHeader">
+      <soap:operation soapAction="urn:UpdateMethodHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToolMaster">
+      <soap:operation soapAction="urn:DeleteToolMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodMaterial">
+      <soap:operation soapAction="urn:UpdateMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodScrapProfile">
+      <soap:operation soapAction="urn:AddMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDetail">
+      <soap:operation soapAction="urn:UpdateMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamilyComponent">
+      <soap:operation soapAction="urn:DeleteProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PartReportingCreateSerial">
+      <soap:operation soapAction="urn:PartReportingCreateSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDescription">
+      <soap:operation soapAction="urn:DeleteMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodScrapProfile">
+      <soap:operation soapAction="urn:InquireMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDescription">
+      <soap:operation soapAction="urn:AddMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PerformSerializedInventoryDowngrade">
+      <soap:operation soapAction="urn:PerformSerializedInventoryDowngrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReportingBatch">
+      <soap:operation soapAction="urn:AddNewReportingBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolHeader">
+      <soap:operation soapAction="urn:DeleteMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodTool">
+      <soap:operation soapAction="urn:UpdateMethodTool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolDetail">
+      <soap:operation soapAction="urn:AddMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolDetail">
+      <soap:operation soapAction="urn:InquireMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodOSRoutingDetail">
+      <soap:operation soapAction="urn:AddMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolDetail">
+      <soap:operation soapAction="urn:UpdateMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamily">
+      <soap:operation soapAction="urn:InquireProdFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRouting">
+      <soap:operation soapAction="urn:AddMethodRouting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamilyComponent">
+      <soap:operation soapAction="urn:InquireProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolDetail">
+      <soap:operation soapAction="urn:DeleteMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodMaterial">
+      <soap:operation soapAction="urn:DeleteMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodScrapProfile">
+      <soap:operation soapAction="urn:UpdateMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireToolMaster">
+      <soap:operation soapAction="urn:InquireToolMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddFirmPlannedOrder">
+      <soap:operation soapAction="urn:AddFirmPlannedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RecreateOneRepetitiveEntry">
+      <soap:operation soapAction="urn:RecreateOneRepetitiveEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamily">
+      <soap:operation soapAction="urn:AddProdFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRouting">
+      <soap:operation soapAction="urn:DeleteMethodRouting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodPartSequenceUomConversion">
+      <soap:operation soapAction="urn:AddMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ivpwsPD001Soap12Binding" type="ns:ivpwsPD001PortType">
+    <wsp:PolicyReference URI="#UsernameToken" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InquireMethodRoutingOperationDetail">
+      <soap12:operation soapAction="urn:InquireMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToolMaster">
+      <soap12:operation soapAction="urn:UpdateToolMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodMaterial">
+      <soap12:operation soapAction="urn:AddMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodScrapProfile">
+      <soap12:operation soapAction="urn:DeleteMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodTool">
+      <soap12:operation soapAction="urn:AddMethodTool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodPartSequenceUomConversion">
+      <soap12:operation soapAction="urn:DeleteMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamilyComponent">
+      <soap12:operation soapAction="urn:AddProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRoutingOperationDescription">
+      <soap12:operation soapAction="urn:InquireMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodTool">
+      <soap12:operation soapAction="urn:InquireMethodTool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRouting">
+      <soap12:operation soapAction="urn:InquireMethodRouting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodHeader">
+      <soap12:operation soapAction="urn:InquireMethodHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodHeader">
+      <soap12:operation soapAction="urn:DeleteMethodHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamilyComponent">
+      <soap12:operation soapAction="urn:UpdateProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolHeader">
+      <soap12:operation soapAction="urn:InquireMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodOSRoutingDetail">
+      <soap12:operation soapAction="urn:DeleteMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDetail">
+      <soap12:operation soapAction="urn:AddMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodHeader">
+      <soap12:operation soapAction="urn:AddMethodHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolHeader">
+      <soap12:operation soapAction="urn:AddMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodPartSequenceUomConversion">
+      <soap12:operation soapAction="urn:UpdateMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRouting">
+      <soap12:operation soapAction="urn:UpdateMethodRouting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodMaterial">
+      <soap12:operation soapAction="urn:InquireMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodTool">
+      <soap12:operation soapAction="urn:DeleteMethodTool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodOSRoutingDetail">
+      <soap12:operation soapAction="urn:UpdateMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamily">
+      <soap12:operation soapAction="urn:UpdateProdFamily" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolHeader">
+      <soap12:operation soapAction="urn:UpdateMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodOSRoutingDetail">
+      <soap12:operation soapAction="urn:InquireMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddToolMaster">
+      <soap12:operation soapAction="urn:AddToolMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDetail">
+      <soap12:operation soapAction="urn:DeleteMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamily">
+      <soap12:operation soapAction="urn:DeleteProdFamily" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodPartSequenceUomConversion">
+      <soap12:operation soapAction="urn:InquireMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDescription">
+      <soap12:operation soapAction="urn:UpdateMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodHeader">
+      <soap12:operation soapAction="urn:UpdateMethodHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToolMaster">
+      <soap12:operation soapAction="urn:DeleteToolMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodMaterial">
+      <soap12:operation soapAction="urn:UpdateMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodScrapProfile">
+      <soap12:operation soapAction="urn:AddMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDetail">
+      <soap12:operation soapAction="urn:UpdateMethodRoutingOperationDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamilyComponent">
+      <soap12:operation soapAction="urn:DeleteProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PartReportingCreateSerial">
+      <soap12:operation soapAction="urn:PartReportingCreateSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDescription">
+      <soap12:operation soapAction="urn:DeleteMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodScrapProfile">
+      <soap12:operation soapAction="urn:InquireMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDescription">
+      <soap12:operation soapAction="urn:AddMethodRoutingOperationDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PerformSerializedInventoryDowngrade">
+      <soap12:operation soapAction="urn:PerformSerializedInventoryDowngrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReportingBatch">
+      <soap12:operation soapAction="urn:AddNewReportingBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolHeader">
+      <soap12:operation soapAction="urn:DeleteMasterBolHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodTool">
+      <soap12:operation soapAction="urn:UpdateMethodTool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolDetail">
+      <soap12:operation soapAction="urn:AddMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolDetail">
+      <soap12:operation soapAction="urn:InquireMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodOSRoutingDetail">
+      <soap12:operation soapAction="urn:AddMethodOSRoutingDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolDetail">
+      <soap12:operation soapAction="urn:UpdateMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamily">
+      <soap12:operation soapAction="urn:InquireProdFamily" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRouting">
+      <soap12:operation soapAction="urn:AddMethodRouting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamilyComponent">
+      <soap12:operation soapAction="urn:InquireProdFamilyComponent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolDetail">
+      <soap12:operation soapAction="urn:DeleteMasterBolDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodMaterial">
+      <soap12:operation soapAction="urn:DeleteMethodMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodScrapProfile">
+      <soap12:operation soapAction="urn:UpdateMethodScrapProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireToolMaster">
+      <soap12:operation soapAction="urn:InquireToolMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddFirmPlannedOrder">
+      <soap12:operation soapAction="urn:AddFirmPlannedOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RecreateOneRepetitiveEntry">
+      <soap12:operation soapAction="urn:RecreateOneRepetitiveEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamily">
+      <soap12:operation soapAction="urn:AddProdFamily" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRouting">
+      <soap12:operation soapAction="urn:DeleteMethodRouting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodPartSequenceUomConversion">
+      <soap12:operation soapAction="urn:AddMethodPartSequenceUomConversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ivpwsPD001HttpBinding" type="ns:ivpwsPD001PortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="InquireMethodRoutingOperationDetail">
+      <http:operation location="ivpwsPD001/InquireMethodRoutingOperationDetail" />
+      <wsdl:input>
+        <mime:content part="InquireMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToolMaster">
+      <http:operation location="ivpwsPD001/UpdateToolMaster" />
+      <wsdl:input>
+        <mime:content part="UpdateToolMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateToolMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodMaterial">
+      <http:operation location="ivpwsPD001/AddMethodMaterial" />
+      <wsdl:input>
+        <mime:content part="AddMethodMaterial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodMaterial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodScrapProfile">
+      <http:operation location="ivpwsPD001/DeleteMethodScrapProfile" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodScrapProfile" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodScrapProfile" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodTool">
+      <http:operation location="ivpwsPD001/AddMethodTool" />
+      <wsdl:input>
+        <mime:content part="AddMethodTool" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodTool" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodPartSequenceUomConversion">
+      <http:operation location="ivpwsPD001/DeleteMethodPartSequenceUomConversion" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamilyComponent">
+      <http:operation location="ivpwsPD001/AddProdFamilyComponent" />
+      <wsdl:input>
+        <mime:content part="AddProdFamilyComponent" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddProdFamilyComponent" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRoutingOperationDescription">
+      <http:operation location="ivpwsPD001/InquireMethodRoutingOperationDescription" />
+      <wsdl:input>
+        <mime:content part="InquireMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodTool">
+      <http:operation location="ivpwsPD001/InquireMethodTool" />
+      <wsdl:input>
+        <mime:content part="InquireMethodTool" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodTool" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodRouting">
+      <http:operation location="ivpwsPD001/InquireMethodRouting" />
+      <wsdl:input>
+        <mime:content part="InquireMethodRouting" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodRouting" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodHeader">
+      <http:operation location="ivpwsPD001/InquireMethodHeader" />
+      <wsdl:input>
+        <mime:content part="InquireMethodHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodHeader">
+      <http:operation location="ivpwsPD001/DeleteMethodHeader" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamilyComponent">
+      <http:operation location="ivpwsPD001/UpdateProdFamilyComponent" />
+      <wsdl:input>
+        <mime:content part="UpdateProdFamilyComponent" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateProdFamilyComponent" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolHeader">
+      <http:operation location="ivpwsPD001/InquireMasterBolHeader" />
+      <wsdl:input>
+        <mime:content part="InquireMasterBolHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMasterBolHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodOSRoutingDetail">
+      <http:operation location="ivpwsPD001/DeleteMethodOSRoutingDetail" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDetail">
+      <http:operation location="ivpwsPD001/AddMethodRoutingOperationDetail" />
+      <wsdl:input>
+        <mime:content part="AddMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodHeader">
+      <http:operation location="ivpwsPD001/AddMethodHeader" />
+      <wsdl:input>
+        <mime:content part="AddMethodHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolHeader">
+      <http:operation location="ivpwsPD001/AddMasterBolHeader" />
+      <wsdl:input>
+        <mime:content part="AddMasterBolHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMasterBolHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodPartSequenceUomConversion">
+      <http:operation location="ivpwsPD001/UpdateMethodPartSequenceUomConversion" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRouting">
+      <http:operation location="ivpwsPD001/UpdateMethodRouting" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodRouting" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodRouting" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodMaterial">
+      <http:operation location="ivpwsPD001/InquireMethodMaterial" />
+      <wsdl:input>
+        <mime:content part="InquireMethodMaterial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodMaterial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodTool">
+      <http:operation location="ivpwsPD001/DeleteMethodTool" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodTool" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodTool" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodOSRoutingDetail">
+      <http:operation location="ivpwsPD001/UpdateMethodOSRoutingDetail" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdFamily">
+      <http:operation location="ivpwsPD001/UpdateProdFamily" />
+      <wsdl:input>
+        <mime:content part="UpdateProdFamily" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateProdFamily" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolHeader">
+      <http:operation location="ivpwsPD001/UpdateMasterBolHeader" />
+      <wsdl:input>
+        <mime:content part="UpdateMasterBolHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMasterBolHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodOSRoutingDetail">
+      <http:operation location="ivpwsPD001/InquireMethodOSRoutingDetail" />
+      <wsdl:input>
+        <mime:content part="InquireMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToolMaster">
+      <http:operation location="ivpwsPD001/AddToolMaster" />
+      <wsdl:input>
+        <mime:content part="AddToolMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddToolMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDetail">
+      <http:operation location="ivpwsPD001/DeleteMethodRoutingOperationDetail" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamily">
+      <http:operation location="ivpwsPD001/DeleteProdFamily" />
+      <wsdl:input>
+        <mime:content part="DeleteProdFamily" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteProdFamily" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodPartSequenceUomConversion">
+      <http:operation location="ivpwsPD001/InquireMethodPartSequenceUomConversion" />
+      <wsdl:input>
+        <mime:content part="InquireMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDescription">
+      <http:operation location="ivpwsPD001/UpdateMethodRoutingOperationDescription" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodHeader">
+      <http:operation location="ivpwsPD001/UpdateMethodHeader" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToolMaster">
+      <http:operation location="ivpwsPD001/DeleteToolMaster" />
+      <wsdl:input>
+        <mime:content part="DeleteToolMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteToolMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodMaterial">
+      <http:operation location="ivpwsPD001/UpdateMethodMaterial" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodMaterial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodMaterial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodScrapProfile">
+      <http:operation location="ivpwsPD001/AddMethodScrapProfile" />
+      <wsdl:input>
+        <mime:content part="AddMethodScrapProfile" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodScrapProfile" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodRoutingOperationDetail">
+      <http:operation location="ivpwsPD001/UpdateMethodRoutingOperationDetail" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodRoutingOperationDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdFamilyComponent">
+      <http:operation location="ivpwsPD001/DeleteProdFamilyComponent" />
+      <wsdl:input>
+        <mime:content part="DeleteProdFamilyComponent" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteProdFamilyComponent" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PartReportingCreateSerial">
+      <http:operation location="ivpwsPD001/PartReportingCreateSerial" />
+      <wsdl:input>
+        <mime:content part="PartReportingCreateSerial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="PartReportingCreateSerial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRoutingOperationDescription">
+      <http:operation location="ivpwsPD001/DeleteMethodRoutingOperationDescription" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMethodScrapProfile">
+      <http:operation location="ivpwsPD001/InquireMethodScrapProfile" />
+      <wsdl:input>
+        <mime:content part="InquireMethodScrapProfile" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMethodScrapProfile" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRoutingOperationDescription">
+      <http:operation location="ivpwsPD001/AddMethodRoutingOperationDescription" />
+      <wsdl:input>
+        <mime:content part="AddMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodRoutingOperationDescription" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformSerializedInventoryDowngrade">
+      <http:operation location="ivpwsPD001/PerformSerializedInventoryDowngrade" />
+      <wsdl:input>
+        <mime:content part="PerformSerializedInventoryDowngrade" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="PerformSerializedInventoryDowngrade" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReportingBatch">
+      <http:operation location="ivpwsPD001/AddNewReportingBatch" />
+      <wsdl:input>
+        <mime:content part="AddNewReportingBatch" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddNewReportingBatch" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolHeader">
+      <http:operation location="ivpwsPD001/DeleteMasterBolHeader" />
+      <wsdl:input>
+        <mime:content part="DeleteMasterBolHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMasterBolHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodTool">
+      <http:operation location="ivpwsPD001/UpdateMethodTool" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodTool" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodTool" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterBolDetail">
+      <http:operation location="ivpwsPD001/AddMasterBolDetail" />
+      <wsdl:input>
+        <mime:content part="AddMasterBolDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMasterBolDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireMasterBolDetail">
+      <http:operation location="ivpwsPD001/InquireMasterBolDetail" />
+      <wsdl:input>
+        <mime:content part="InquireMasterBolDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireMasterBolDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodOSRoutingDetail">
+      <http:operation location="ivpwsPD001/AddMethodOSRoutingDetail" />
+      <wsdl:input>
+        <mime:content part="AddMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodOSRoutingDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMasterBolDetail">
+      <http:operation location="ivpwsPD001/UpdateMasterBolDetail" />
+      <wsdl:input>
+        <mime:content part="UpdateMasterBolDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMasterBolDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamily">
+      <http:operation location="ivpwsPD001/InquireProdFamily" />
+      <wsdl:input>
+        <mime:content part="InquireProdFamily" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireProdFamily" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodRouting">
+      <http:operation location="ivpwsPD001/AddMethodRouting" />
+      <wsdl:input>
+        <mime:content part="AddMethodRouting" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodRouting" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProdFamilyComponent">
+      <http:operation location="ivpwsPD001/InquireProdFamilyComponent" />
+      <wsdl:input>
+        <mime:content part="InquireProdFamilyComponent" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireProdFamilyComponent" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBolDetail">
+      <http:operation location="ivpwsPD001/DeleteMasterBolDetail" />
+      <wsdl:input>
+        <mime:content part="DeleteMasterBolDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMasterBolDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodMaterial">
+      <http:operation location="ivpwsPD001/DeleteMethodMaterial" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodMaterial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodMaterial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMethodScrapProfile">
+      <http:operation location="ivpwsPD001/UpdateMethodScrapProfile" />
+      <wsdl:input>
+        <mime:content part="UpdateMethodScrapProfile" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateMethodScrapProfile" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireToolMaster">
+      <http:operation location="ivpwsPD001/InquireToolMaster" />
+      <wsdl:input>
+        <mime:content part="InquireToolMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireToolMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFirmPlannedOrder">
+      <http:operation location="ivpwsPD001/AddFirmPlannedOrder" />
+      <wsdl:input>
+        <mime:content part="AddFirmPlannedOrder" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddFirmPlannedOrder" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecreateOneRepetitiveEntry">
+      <http:operation location="ivpwsPD001/RecreateOneRepetitiveEntry" />
+      <wsdl:input>
+        <mime:content part="RecreateOneRepetitiveEntry" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="RecreateOneRepetitiveEntry" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProdFamily">
+      <http:operation location="ivpwsPD001/AddProdFamily" />
+      <wsdl:input>
+        <mime:content part="AddProdFamily" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddProdFamily" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMethodRouting">
+      <http:operation location="ivpwsPD001/DeleteMethodRouting" />
+      <wsdl:input>
+        <mime:content part="DeleteMethodRouting" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteMethodRouting" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMethodPartSequenceUomConversion">
+      <http:operation location="ivpwsPD001/AddMethodPartSequenceUomConversion" />
+      <wsdl:input>
+        <mime:content part="AddMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddMethodPartSequenceUomConversion" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ivpwsPD001">
+    <wsdl:port name="ivpwsPD001HttpSoap11Endpoint" binding="ns:ivpwsPD001Soap11Binding">
+      <soap:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsPD001.ivpwsPD001HttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="ivpwsPD001HttpSoap12Endpoint" binding="ns:ivpwsPD001Soap12Binding">
+      <soap12:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsPD001.ivpwsPD001HttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="ivpwsPD001HttpEndpoint" binding="ns:ivpwsPD001HttpBinding">
+      <http:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsPD001.ivpwsPD001HttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,3592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xsdns="http://webservices.solarsoft.com/ivp/xsd/ivpwsMAIN001" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://webservices.solarsoft.com/ivp" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://webservices.solarsoft.com/ivp" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>ivpwsMAIN001</wsdl:documentation>
+  <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservices.solarsoft.com/ivp/xsd/ivpwsMAIN001">
+      <xs:include schemaLocation="http://172.16.1.51:8080/iVPWebServices/services/ivpwsMAIN001?xsd=ivpwsMAIN001.xsd" />
+      <xs:element name="ActivateSerial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_ActivateSerial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActivateSerialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCarrierAccount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddCarrierAccount" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCarrierAccountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddContainer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddContainerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddContainerAssignment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddContainerAssignment" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddContainerAssignmentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddContainerBOM">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddContainerBOM" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddContainerBOMResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCustomer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddCustomer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCustomerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCustomerDropShipClient">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddCustomerDropShipClient" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCustomerDropShipClientResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddEmployee">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddEmployee" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddEmployeeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPlntCustomerOverride">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddPlntCustomerOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPlntCustomerOverrideResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPlntVendorOverride">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddPlntVendorOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPlntVendorOverrideResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddSerializedInventoryTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddSerializedInventoryTransaction" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddSerializedInventoryTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddVendor">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddVendor" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddVendorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddVendorFFLNumber">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddVendorFFLNumber" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddVendorFFLNumberResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BuildToExistingMasterMix">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_BuildToExistingMasterMix" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BuildToExistingMasterMixResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_BuildToExistingMasterMix" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeactivateSerial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeactivateSerial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeactivateSerialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCarrierAccount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteCarrierAccount" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCarrierAccountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteContainer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteContainerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteContainerAssignment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteContainerAssignment" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteContainerAssignmentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteContainerBOM">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteContainerBOM" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteContainerBOMResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCustomer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteCustomer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCustomerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCustomerDropShipClient">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteCustomerDropShipClient" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCustomerDropShipClientResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteEmployee">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteEmployee" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteEmployeeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePlntCustomerOverride">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeletePlntCustomerOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePlntCustomerOverrideResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePlntVendorOverride">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeletePlntVendorOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePlntVendorOverrideResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteVendor">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteVendor" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteVendorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteVendorFFLNumber">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteVendorFFLNumber" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteVendorFFLNumberResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HoldUnholdSerial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_HoldUnholdSerial" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HoldUnholdSerialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCarrierAccount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireCarrierAccount" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCarrierAccountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireCarrierAccount" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCompany">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireCompany" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCompanyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireCompany" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireContainer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireContainerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireContainerAssignment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireContainerAssignment" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireContainerAssignmentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireContainerAssignment" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireContainerBOM">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireContainerBOM" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireContainerBOMResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireContainerBOM" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCreditVoucherReasonCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireCreditVoucherReasonCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCreditVoucherReasonCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireCreditVoucherReasonCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireCustomer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireCustomer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomerContact">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireCustomerContact" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomerContactResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireCustomerContact" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomerDropShipClient">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireCustomerDropShipClient" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomerDropShipClientResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireCustomerDropShipClient" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomerList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireCustomerList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireCustomerListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireCustomerList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireEmployee">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireEmployee" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireEmployeeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireEmployee" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquirePlntCustomerOverride">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquirePlntCustomerOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquirePlntCustomerOverrideResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquirePlntCustomerOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProjectCostCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireProjectCostCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProjectCostCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireProjectCostCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireSalesmanCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireSalesmanCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireSalesmanCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireSalesmanCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireSerialMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireSerialMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireSerialMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireSerialMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireShippingCarrierCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireShippingCarrierCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireShippingCarrierCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireShippingCarrierCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireShipCarrierServiceCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireShipCarrierServiceCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireShipCarrierServiceCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireShipCarrierServiceCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireTaxGroupRateCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireTaxGroupRateCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireTaxGroupRateCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireTaxGroupRateCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireTermCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireTermCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireTermCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireTermCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireTerritoryCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireTerritoryCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireTerritoryCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireTerritoryCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireVendor">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireVendor" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireVendorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireVendor" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireVendorFFLNumber">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireVendorFFLNumber" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireVendorFFLNumberResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireVendorFFLNumber" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReprintLabel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_ReprintLabel" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReprintLabelResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_ReprintLabel" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCarrierAccount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateCarrierAccount" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCarrierAccountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateContainer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateContainerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateContainerAssignment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateContainerAssignment" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateContainerAssignmentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateContainerBOM">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateContainerBOM" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateContainerBOMResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCustomer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateCustomer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCustomerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCustomerDropShipClient">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateCustomerDropShipClient" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCustomerDropShipClientResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateEmployee">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateEmployee" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateEmployeeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePlntCustomerOverride">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdatePlntCustomerOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePlntCustomerOverrideResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePlntVendorOverride">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdatePlntVendorOverride" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePlntVendorOverrideResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateVendor">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateVendor" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateVendorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateVendorFFLNumber">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateVendorFFLNumber" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateVendorFFLNumberResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ServerFaultResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Service_InquireShipCarrierServiceCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireShipCarrierServiceCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireShipCarrierServiceCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireShipCarrierServiceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServerFault">
+    <wsdl:part name="detail" element="xsdns:ServerFaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddVendorFFLNumber_Request">
+    <wsdl:part name="parameters" element="xsdns:AddVendorFFLNumber" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddVendorFFLNumber_Response">
+    <wsdl:part name="parameters" element="xsdns:AddVendorFFLNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteCustomerDropShipClient_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteCustomerDropShipClient" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteCustomerDropShipClient_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteCustomerDropShipClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPlntCustomerOverride_Request">
+    <wsdl:part name="parameters" element="xsdns:AddPlntCustomerOverride" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPlntCustomerOverride_Response">
+    <wsdl:part name="parameters" element="xsdns:AddPlntCustomerOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireContainerBOM_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireContainerBOM" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireContainerBOM_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireContainerBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePlntCustomerOverride_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdatePlntCustomerOverride" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePlntCustomerOverride_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdatePlntCustomerOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPlntVendorOverride_Request">
+    <wsdl:part name="parameters" element="xsdns:AddPlntVendorOverride" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPlntVendorOverride_Response">
+    <wsdl:part name="parameters" element="xsdns:AddPlntVendorOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddSerializedInventoryTransaction_Request">
+    <wsdl:part name="parameters" element="xsdns:AddSerializedInventoryTransaction" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddSerializedInventoryTransaction_Response">
+    <wsdl:part name="parameters" element="xsdns:AddSerializedInventoryTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteVendorFFLNumber_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteVendorFFLNumber" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteVendorFFLNumber_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteVendorFFLNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteContainerBOM_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteContainerBOM" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteContainerBOM_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteContainerBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireTaxGroupRateCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireTaxGroupRateCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireTaxGroupRateCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireTaxGroupRateCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateVendorFFLNumber_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateVendorFFLNumber" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateVendorFFLNumber_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateVendorFFLNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomerDropShipClient_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomerDropShipClient" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomerDropShipClient_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomerDropShipClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddContainer_Request">
+    <wsdl:part name="parameters" element="xsdns:AddContainer" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddContainer_Response">
+    <wsdl:part name="parameters" element="xsdns:AddContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddEmployee_Request">
+    <wsdl:part name="parameters" element="xsdns:AddEmployee" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddEmployee_Response">
+    <wsdl:part name="parameters" element="xsdns:AddEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePlntVendorOverride_Request">
+    <wsdl:part name="parameters" element="xsdns:DeletePlntVendorOverride" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePlntVendorOverride_Response">
+    <wsdl:part name="parameters" element="xsdns:DeletePlntVendorOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireVendor_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireVendor" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireVendor_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquirePlntCustomerOverride_Request">
+    <wsdl:part name="parameters" element="xsdns:InquirePlntCustomerOverride" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquirePlntCustomerOverride_Response">
+    <wsdl:part name="parameters" element="xsdns:InquirePlntCustomerOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddVendor_Request">
+    <wsdl:part name="parameters" element="xsdns:AddVendor" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddVendor_Response">
+    <wsdl:part name="parameters" element="xsdns:AddVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCarrierAccount_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireCarrierAccount" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCarrierAccount_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireCarrierAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteCustomer_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteCustomer_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePlntCustomerOverride_Request">
+    <wsdl:part name="parameters" element="xsdns:DeletePlntCustomerOverride" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePlntCustomerOverride_Response">
+    <wsdl:part name="parameters" element="xsdns:DeletePlntCustomerOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddContainerBOM_Request">
+    <wsdl:part name="parameters" element="xsdns:AddContainerBOM" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddContainerBOM_Response">
+    <wsdl:part name="parameters" element="xsdns:AddContainerBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateCustomerDropShipClient_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateCustomerDropShipClient" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateCustomerDropShipClient_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateCustomerDropShipClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCustomerDropShipClient_Request">
+    <wsdl:part name="parameters" element="xsdns:AddCustomerDropShipClient" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCustomerDropShipClient_Response">
+    <wsdl:part name="parameters" element="xsdns:AddCustomerDropShipClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateVendor_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateVendor" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateVendor_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCarrierAccount_Request">
+    <wsdl:part name="parameters" element="xsdns:AddCarrierAccount" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCarrierAccount_Response">
+    <wsdl:part name="parameters" element="xsdns:AddCarrierAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomer_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomer" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomer_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePlntVendorOverride_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdatePlntVendorOverride" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePlntVendorOverride_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdatePlntVendorOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireEmployee_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireEmployee" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireEmployee_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireTerritoryCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireTerritoryCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireTerritoryCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireTerritoryCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomerList_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomerList" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomerList_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteContainerAssignment_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteContainerAssignment" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteContainerAssignment_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteContainerAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomerContact_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomerContact" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCustomerContact_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireCustomerContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteCarrierAccount_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteCarrierAccount" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteCarrierAccount_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteCarrierAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCustomer_Request">
+    <wsdl:part name="parameters" element="xsdns:AddCustomer" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCustomer_Response">
+    <wsdl:part name="parameters" element="xsdns:AddCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_ReprintLabel_Request">
+    <wsdl:part name="parameters" element="xsdns:ReprintLabel" />
+  </wsdl:message>
+  <wsdl:message name="Service_ReprintLabel_Response">
+    <wsdl:part name="parameters" element="xsdns:ReprintLabelResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_HoldUnholdSerial_Request">
+    <wsdl:part name="parameters" element="xsdns:HoldUnholdSerial" />
+  </wsdl:message>
+  <wsdl:message name="Service_HoldUnholdSerial_Response">
+    <wsdl:part name="parameters" element="xsdns:HoldUnholdSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireTermCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireTermCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireTermCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireTermCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteEmployee_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteEmployee_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCompany_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireCompany" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCompany_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireShippingCarrierCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireShippingCarrierCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireShippingCarrierCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireShippingCarrierCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeactivateSerial_Request">
+    <wsdl:part name="parameters" element="xsdns:DeactivateSerial" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeactivateSerial_Response">
+    <wsdl:part name="parameters" element="xsdns:DeactivateSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_ActivateSerial_Request">
+    <wsdl:part name="parameters" element="xsdns:ActivateSerial" />
+  </wsdl:message>
+  <wsdl:message name="Service_ActivateSerial_Response">
+    <wsdl:part name="parameters" element="xsdns:ActivateSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateCarrierAccount_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateCarrierAccount" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateCarrierAccount_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateCarrierAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateContainer_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateContainer" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateContainer_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireVendorFFLNumber_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireVendorFFLNumber" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireVendorFFLNumber_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireVendorFFLNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateContainerBOM_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateContainerBOM" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateContainerBOM_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateContainerBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteVendor_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteVendor" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteVendor_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddContainerAssignment_Request">
+    <wsdl:part name="parameters" element="xsdns:AddContainerAssignment" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddContainerAssignment_Response">
+    <wsdl:part name="parameters" element="xsdns:AddContainerAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireContainerAssignment_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireContainerAssignment" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireContainerAssignment_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireContainerAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteContainer_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteContainer" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteContainer_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateCustomer_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateCustomer_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireProjectCostCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireProjectCostCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireProjectCostCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireProjectCostCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateContainerAssignment_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateContainerAssignment" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateContainerAssignment_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateContainerAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_BuildToExistingMasterMix_Request">
+    <wsdl:part name="parameters" element="xsdns:BuildToExistingMasterMix" />
+  </wsdl:message>
+  <wsdl:message name="Service_BuildToExistingMasterMix_Response">
+    <wsdl:part name="parameters" element="xsdns:BuildToExistingMasterMixResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateEmployee_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateEmployee_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCreditVoucherReasonCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireCreditVoucherReasonCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireCreditVoucherReasonCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireCreditVoucherReasonCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireContainer_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireContainer" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireContainer_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireSerialMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireSerialMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireSerialMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireSerialMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireSalesmanCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireSalesmanCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireSalesmanCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireSalesmanCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ivpwsMAIN001PortType">
+    <wsdl:operation name="InquireShipCarrierServiceCode">
+      <wsdl:input wsaw:Action="urn:InquireShipCarrierServiceCode" message="ns:Service_InquireShipCarrierServiceCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireShipCarrierServiceCode_Response" message="ns:Service_InquireShipCarrierServiceCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireShipCarrierServiceCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVendorFFLNumber">
+      <wsdl:input wsaw:Action="urn:AddVendorFFLNumber" message="ns:Service_AddVendorFFLNumber_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddVendorFFLNumber_Response" message="ns:Service_AddVendorFFLNumber_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddVendorFFLNumber_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerDropShipClient">
+      <wsdl:input wsaw:Action="urn:DeleteCustomerDropShipClient" message="ns:Service_DeleteCustomerDropShipClient_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteCustomerDropShipClient_Response" message="ns:Service_DeleteCustomerDropShipClient_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteCustomerDropShipClient_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntCustomerOverride">
+      <wsdl:input wsaw:Action="urn:AddPlntCustomerOverride" message="ns:Service_AddPlntCustomerOverride_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddPlntCustomerOverride_Response" message="ns:Service_AddPlntCustomerOverride_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddPlntCustomerOverride_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerBOM">
+      <wsdl:input wsaw:Action="urn:InquireContainerBOM" message="ns:Service_InquireContainerBOM_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireContainerBOM_Response" message="ns:Service_InquireContainerBOM_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireContainerBOM_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntCustomerOverride">
+      <wsdl:input wsaw:Action="urn:UpdatePlntCustomerOverride" message="ns:Service_UpdatePlntCustomerOverride_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdatePlntCustomerOverride_Response" message="ns:Service_UpdatePlntCustomerOverride_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdatePlntCustomerOverride_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntVendorOverride">
+      <wsdl:input wsaw:Action="urn:AddPlntVendorOverride" message="ns:Service_AddPlntVendorOverride_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddPlntVendorOverride_Response" message="ns:Service_AddPlntVendorOverride_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddPlntVendorOverride_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSerializedInventoryTransaction">
+      <wsdl:input wsaw:Action="urn:AddSerializedInventoryTransaction" message="ns:Service_AddSerializedInventoryTransaction_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddSerializedInventoryTransaction_Response" message="ns:Service_AddSerializedInventoryTransaction_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddSerializedInventoryTransaction_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorFFLNumber">
+      <wsdl:input wsaw:Action="urn:DeleteVendorFFLNumber" message="ns:Service_DeleteVendorFFLNumber_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteVendorFFLNumber_Response" message="ns:Service_DeleteVendorFFLNumber_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteVendorFFLNumber_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerBOM">
+      <wsdl:input wsaw:Action="urn:DeleteContainerBOM" message="ns:Service_DeleteContainerBOM_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteContainerBOM_Response" message="ns:Service_DeleteContainerBOM_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteContainerBOM_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireTaxGroupRateCode">
+      <wsdl:input wsaw:Action="urn:InquireTaxGroupRateCode" message="ns:Service_InquireTaxGroupRateCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireTaxGroupRateCode_Response" message="ns:Service_InquireTaxGroupRateCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireTaxGroupRateCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorFFLNumber">
+      <wsdl:input wsaw:Action="urn:UpdateVendorFFLNumber" message="ns:Service_UpdateVendorFFLNumber_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateVendorFFLNumber_Response" message="ns:Service_UpdateVendorFFLNumber_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateVendorFFLNumber_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerDropShipClient">
+      <wsdl:input wsaw:Action="urn:InquireCustomerDropShipClient" message="ns:Service_InquireCustomerDropShipClient_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireCustomerDropShipClient_Response" message="ns:Service_InquireCustomerDropShipClient_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireCustomerDropShipClient_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContainer">
+      <wsdl:input wsaw:Action="urn:AddContainer" message="ns:Service_AddContainer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddContainer_Response" message="ns:Service_AddContainer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddContainer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <wsdl:input wsaw:Action="urn:AddEmployee" message="ns:Service_AddEmployee_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddEmployee_Response" message="ns:Service_AddEmployee_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddEmployee_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntVendorOverride">
+      <wsdl:input wsaw:Action="urn:DeletePlntVendorOverride" message="ns:Service_DeletePlntVendorOverride_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeletePlntVendorOverride_Response" message="ns:Service_DeletePlntVendorOverride_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeletePlntVendorOverride_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendor">
+      <wsdl:input wsaw:Action="urn:InquireVendor" message="ns:Service_InquireVendor_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireVendor_Response" message="ns:Service_InquireVendor_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireVendor_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquirePlntCustomerOverride">
+      <wsdl:input wsaw:Action="urn:InquirePlntCustomerOverride" message="ns:Service_InquirePlntCustomerOverride_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquirePlntCustomerOverride_Response" message="ns:Service_InquirePlntCustomerOverride_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquirePlntCustomerOverride_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVendor">
+      <wsdl:input wsaw:Action="urn:AddVendor" message="ns:Service_AddVendor_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddVendor_Response" message="ns:Service_AddVendor_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddVendor_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireCarrierAccount">
+      <wsdl:input wsaw:Action="urn:InquireCarrierAccount" message="ns:Service_InquireCarrierAccount_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireCarrierAccount_Response" message="ns:Service_InquireCarrierAccount_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireCarrierAccount_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input wsaw:Action="urn:DeleteCustomer" message="ns:Service_DeleteCustomer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteCustomer_Response" message="ns:Service_DeleteCustomer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteCustomer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntCustomerOverride">
+      <wsdl:input wsaw:Action="urn:DeletePlntCustomerOverride" message="ns:Service_DeletePlntCustomerOverride_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeletePlntCustomerOverride_Response" message="ns:Service_DeletePlntCustomerOverride_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeletePlntCustomerOverride_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerBOM">
+      <wsdl:input wsaw:Action="urn:AddContainerBOM" message="ns:Service_AddContainerBOM_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddContainerBOM_Response" message="ns:Service_AddContainerBOM_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddContainerBOM_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerDropShipClient">
+      <wsdl:input wsaw:Action="urn:UpdateCustomerDropShipClient" message="ns:Service_UpdateCustomerDropShipClient_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateCustomerDropShipClient_Response" message="ns:Service_UpdateCustomerDropShipClient_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateCustomerDropShipClient_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDropShipClient">
+      <wsdl:input wsaw:Action="urn:AddCustomerDropShipClient" message="ns:Service_AddCustomerDropShipClient_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddCustomerDropShipClient_Response" message="ns:Service_AddCustomerDropShipClient_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddCustomerDropShipClient_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <wsdl:input wsaw:Action="urn:UpdateVendor" message="ns:Service_UpdateVendor_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateVendor_Response" message="ns:Service_UpdateVendor_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateVendor_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCarrierAccount">
+      <wsdl:input wsaw:Action="urn:AddCarrierAccount" message="ns:Service_AddCarrierAccount_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddCarrierAccount_Response" message="ns:Service_AddCarrierAccount_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddCarrierAccount_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomer">
+      <wsdl:input wsaw:Action="urn:InquireCustomer" message="ns:Service_InquireCustomer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireCustomer_Response" message="ns:Service_InquireCustomer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireCustomer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntVendorOverride">
+      <wsdl:input wsaw:Action="urn:UpdatePlntVendorOverride" message="ns:Service_UpdatePlntVendorOverride_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdatePlntVendorOverride_Response" message="ns:Service_UpdatePlntVendorOverride_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdatePlntVendorOverride_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireEmployee">
+      <wsdl:input wsaw:Action="urn:InquireEmployee" message="ns:Service_InquireEmployee_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireEmployee_Response" message="ns:Service_InquireEmployee_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireEmployee_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireTerritoryCode">
+      <wsdl:input wsaw:Action="urn:InquireTerritoryCode" message="ns:Service_InquireTerritoryCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireTerritoryCode_Response" message="ns:Service_InquireTerritoryCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireTerritoryCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerList">
+      <wsdl:input wsaw:Action="urn:InquireCustomerList" message="ns:Service_InquireCustomerList_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireCustomerList_Response" message="ns:Service_InquireCustomerList_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireCustomerList_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerAssignment">
+      <wsdl:input wsaw:Action="urn:DeleteContainerAssignment" message="ns:Service_DeleteContainerAssignment_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteContainerAssignment_Response" message="ns:Service_DeleteContainerAssignment_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteContainerAssignment_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerContact">
+      <wsdl:input wsaw:Action="urn:InquireCustomerContact" message="ns:Service_InquireCustomerContact_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireCustomerContact_Response" message="ns:Service_InquireCustomerContact_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireCustomerContact_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCarrierAccount">
+      <wsdl:input wsaw:Action="urn:DeleteCarrierAccount" message="ns:Service_DeleteCarrierAccount_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteCarrierAccount_Response" message="ns:Service_DeleteCarrierAccount_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteCarrierAccount_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <wsdl:input wsaw:Action="urn:AddCustomer" message="ns:Service_AddCustomer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddCustomer_Response" message="ns:Service_AddCustomer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddCustomer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="ReprintLabel">
+      <wsdl:input wsaw:Action="urn:ReprintLabel" message="ns:Service_ReprintLabel_Request" />
+      <wsdl:output wsaw:Action="urn:Service_ReprintLabel_Response" message="ns:Service_ReprintLabel_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_ReprintLabel_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="HoldUnholdSerial">
+      <wsdl:input wsaw:Action="urn:HoldUnholdSerial" message="ns:Service_HoldUnholdSerial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_HoldUnholdSerial_Response" message="ns:Service_HoldUnholdSerial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_HoldUnholdSerial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireTermCode">
+      <wsdl:input wsaw:Action="urn:InquireTermCode" message="ns:Service_InquireTermCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireTermCode_Response" message="ns:Service_InquireTermCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireTermCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <wsdl:input wsaw:Action="urn:DeleteEmployee" message="ns:Service_DeleteEmployee_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteEmployee_Response" message="ns:Service_DeleteEmployee_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteEmployee_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireCompany">
+      <wsdl:input wsaw:Action="urn:InquireCompany" message="ns:Service_InquireCompany_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireCompany_Response" message="ns:Service_InquireCompany_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireCompany_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireShippingCarrierCode">
+      <wsdl:input wsaw:Action="urn:InquireShippingCarrierCode" message="ns:Service_InquireShippingCarrierCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireShippingCarrierCode_Response" message="ns:Service_InquireShippingCarrierCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireShippingCarrierCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateSerial">
+      <wsdl:input wsaw:Action="urn:DeactivateSerial" message="ns:Service_DeactivateSerial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeactivateSerial_Response" message="ns:Service_DeactivateSerial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeactivateSerial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateSerial">
+      <wsdl:input wsaw:Action="urn:ActivateSerial" message="ns:Service_ActivateSerial_Request" />
+      <wsdl:output wsaw:Action="urn:Service_ActivateSerial_Response" message="ns:Service_ActivateSerial_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_ActivateSerial_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarrierAccount">
+      <wsdl:input wsaw:Action="urn:UpdateCarrierAccount" message="ns:Service_UpdateCarrierAccount_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateCarrierAccount_Response" message="ns:Service_UpdateCarrierAccount_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateCarrierAccount_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainer">
+      <wsdl:input wsaw:Action="urn:UpdateContainer" message="ns:Service_UpdateContainer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateContainer_Response" message="ns:Service_UpdateContainer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateContainer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendorFFLNumber">
+      <wsdl:input wsaw:Action="urn:InquireVendorFFLNumber" message="ns:Service_InquireVendorFFLNumber_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireVendorFFLNumber_Response" message="ns:Service_InquireVendorFFLNumber_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireVendorFFLNumber_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerBOM">
+      <wsdl:input wsaw:Action="urn:UpdateContainerBOM" message="ns:Service_UpdateContainerBOM_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateContainerBOM_Response" message="ns:Service_UpdateContainerBOM_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateContainerBOM_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendor">
+      <wsdl:input wsaw:Action="urn:DeleteVendor" message="ns:Service_DeleteVendor_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteVendor_Response" message="ns:Service_DeleteVendor_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteVendor_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerAssignment">
+      <wsdl:input wsaw:Action="urn:AddContainerAssignment" message="ns:Service_AddContainerAssignment_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddContainerAssignment_Response" message="ns:Service_AddContainerAssignment_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddContainerAssignment_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerAssignment">
+      <wsdl:input wsaw:Action="urn:InquireContainerAssignment" message="ns:Service_InquireContainerAssignment_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireContainerAssignment_Response" message="ns:Service_InquireContainerAssignment_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireContainerAssignment_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainer">
+      <wsdl:input wsaw:Action="urn:DeleteContainer" message="ns:Service_DeleteContainer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteContainer_Response" message="ns:Service_DeleteContainer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteContainer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input wsaw:Action="urn:UpdateCustomer" message="ns:Service_UpdateCustomer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateCustomer_Response" message="ns:Service_UpdateCustomer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateCustomer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireProjectCostCode">
+      <wsdl:input wsaw:Action="urn:InquireProjectCostCode" message="ns:Service_InquireProjectCostCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireProjectCostCode_Response" message="ns:Service_InquireProjectCostCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireProjectCostCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerAssignment">
+      <wsdl:input wsaw:Action="urn:UpdateContainerAssignment" message="ns:Service_UpdateContainerAssignment_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateContainerAssignment_Response" message="ns:Service_UpdateContainerAssignment_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateContainerAssignment_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="BuildToExistingMasterMix">
+      <wsdl:input wsaw:Action="urn:BuildToExistingMasterMix" message="ns:Service_BuildToExistingMasterMix_Request" />
+      <wsdl:output wsaw:Action="urn:Service_BuildToExistingMasterMix_Response" message="ns:Service_BuildToExistingMasterMix_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_BuildToExistingMasterMix_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <wsdl:input wsaw:Action="urn:UpdateEmployee" message="ns:Service_UpdateEmployee_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateEmployee_Response" message="ns:Service_UpdateEmployee_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateEmployee_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireCreditVoucherReasonCode">
+      <wsdl:input wsaw:Action="urn:InquireCreditVoucherReasonCode" message="ns:Service_InquireCreditVoucherReasonCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireCreditVoucherReasonCode_Response" message="ns:Service_InquireCreditVoucherReasonCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireCreditVoucherReasonCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainer">
+      <wsdl:input wsaw:Action="urn:InquireContainer" message="ns:Service_InquireContainer_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireContainer_Response" message="ns:Service_InquireContainer_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireContainer_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireSerialMaster">
+      <wsdl:input wsaw:Action="urn:InquireSerialMaster" message="ns:Service_InquireSerialMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireSerialMaster_Response" message="ns:Service_InquireSerialMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireSerialMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireSalesmanCode">
+      <wsdl:input wsaw:Action="urn:InquireSalesmanCode" message="ns:Service_InquireSalesmanCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireSalesmanCode_Response" message="ns:Service_InquireSalesmanCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireSalesmanCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ivpwsMAIN001Soap11Binding" type="ns:ivpwsMAIN001PortType">
+    <wsp:PolicyReference URI="#UsernameToken" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InquireShipCarrierServiceCode">
+      <soap:operation soapAction="urn:InquireShipCarrierServiceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddVendorFFLNumber">
+      <soap:operation soapAction="urn:AddVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerDropShipClient">
+      <soap:operation soapAction="urn:DeleteCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntCustomerOverride">
+      <soap:operation soapAction="urn:AddPlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerBOM">
+      <soap:operation soapAction="urn:InquireContainerBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntCustomerOverride">
+      <soap:operation soapAction="urn:UpdatePlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntVendorOverride">
+      <soap:operation soapAction="urn:AddPlntVendorOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddSerializedInventoryTransaction">
+      <soap:operation soapAction="urn:AddSerializedInventoryTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorFFLNumber">
+      <soap:operation soapAction="urn:DeleteVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerBOM">
+      <soap:operation soapAction="urn:DeleteContainerBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTaxGroupRateCode">
+      <soap:operation soapAction="urn:InquireTaxGroupRateCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorFFLNumber">
+      <soap:operation soapAction="urn:UpdateVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerDropShipClient">
+      <soap:operation soapAction="urn:InquireCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainer">
+      <soap:operation soapAction="urn:AddContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <soap:operation soapAction="urn:AddEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntVendorOverride">
+      <soap:operation soapAction="urn:DeletePlntVendorOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendor">
+      <soap:operation soapAction="urn:InquireVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePlntCustomerOverride">
+      <soap:operation soapAction="urn:InquirePlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddVendor">
+      <soap:operation soapAction="urn:AddVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCarrierAccount">
+      <soap:operation soapAction="urn:InquireCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="urn:DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntCustomerOverride">
+      <soap:operation soapAction="urn:DeletePlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerBOM">
+      <soap:operation soapAction="urn:AddContainerBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerDropShipClient">
+      <soap:operation soapAction="urn:UpdateCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDropShipClient">
+      <soap:operation soapAction="urn:AddCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <soap:operation soapAction="urn:UpdateVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCarrierAccount">
+      <soap:operation soapAction="urn:AddCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomer">
+      <soap:operation soapAction="urn:InquireCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntVendorOverride">
+      <soap:operation soapAction="urn:UpdatePlntVendorOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireEmployee">
+      <soap:operation soapAction="urn:InquireEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTerritoryCode">
+      <soap:operation soapAction="urn:InquireTerritoryCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerList">
+      <soap:operation soapAction="urn:InquireCustomerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerAssignment">
+      <soap:operation soapAction="urn:DeleteContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerContact">
+      <soap:operation soapAction="urn:InquireCustomerContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCarrierAccount">
+      <soap:operation soapAction="urn:DeleteCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap:operation soapAction="urn:AddCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReprintLabel">
+      <soap:operation soapAction="urn:ReprintLabel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HoldUnholdSerial">
+      <soap:operation soapAction="urn:HoldUnholdSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTermCode">
+      <soap:operation soapAction="urn:InquireTermCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap:operation soapAction="urn:DeleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCompany">
+      <soap:operation soapAction="urn:InquireCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireShippingCarrierCode">
+      <soap:operation soapAction="urn:InquireShippingCarrierCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateSerial">
+      <soap:operation soapAction="urn:DeactivateSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateSerial">
+      <soap:operation soapAction="urn:ActivateSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarrierAccount">
+      <soap:operation soapAction="urn:UpdateCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainer">
+      <soap:operation soapAction="urn:UpdateContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendorFFLNumber">
+      <soap:operation soapAction="urn:InquireVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerBOM">
+      <soap:operation soapAction="urn:UpdateContainerBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendor">
+      <soap:operation soapAction="urn:DeleteVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerAssignment">
+      <soap:operation soapAction="urn:AddContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerAssignment">
+      <soap:operation soapAction="urn:InquireContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainer">
+      <soap:operation soapAction="urn:DeleteContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="urn:UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProjectCostCode">
+      <soap:operation soapAction="urn:InquireProjectCostCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerAssignment">
+      <soap:operation soapAction="urn:UpdateContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BuildToExistingMasterMix">
+      <soap:operation soapAction="urn:BuildToExistingMasterMix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <soap:operation soapAction="urn:UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCreditVoucherReasonCode">
+      <soap:operation soapAction="urn:InquireCreditVoucherReasonCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainer">
+      <soap:operation soapAction="urn:InquireContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireSerialMaster">
+      <soap:operation soapAction="urn:InquireSerialMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireSalesmanCode">
+      <soap:operation soapAction="urn:InquireSalesmanCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ivpwsMAIN001Soap12Binding" type="ns:ivpwsMAIN001PortType">
+    <wsp:PolicyReference URI="#UsernameToken" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InquireShipCarrierServiceCode">
+      <soap12:operation soapAction="urn:InquireShipCarrierServiceCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddVendorFFLNumber">
+      <soap12:operation soapAction="urn:AddVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerDropShipClient">
+      <soap12:operation soapAction="urn:DeleteCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntCustomerOverride">
+      <soap12:operation soapAction="urn:AddPlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerBOM">
+      <soap12:operation soapAction="urn:InquireContainerBOM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntCustomerOverride">
+      <soap12:operation soapAction="urn:UpdatePlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntVendorOverride">
+      <soap12:operation soapAction="urn:AddPlntVendorOverride" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddSerializedInventoryTransaction">
+      <soap12:operation soapAction="urn:AddSerializedInventoryTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorFFLNumber">
+      <soap12:operation soapAction="urn:DeleteVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerBOM">
+      <soap12:operation soapAction="urn:DeleteContainerBOM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTaxGroupRateCode">
+      <soap12:operation soapAction="urn:InquireTaxGroupRateCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorFFLNumber">
+      <soap12:operation soapAction="urn:UpdateVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerDropShipClient">
+      <soap12:operation soapAction="urn:InquireCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainer">
+      <soap12:operation soapAction="urn:AddContainer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <soap12:operation soapAction="urn:AddEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntVendorOverride">
+      <soap12:operation soapAction="urn:DeletePlntVendorOverride" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendor">
+      <soap12:operation soapAction="urn:InquireVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePlntCustomerOverride">
+      <soap12:operation soapAction="urn:InquirePlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddVendor">
+      <soap12:operation soapAction="urn:AddVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCarrierAccount">
+      <soap12:operation soapAction="urn:InquireCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap12:operation soapAction="urn:DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntCustomerOverride">
+      <soap12:operation soapAction="urn:DeletePlntCustomerOverride" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerBOM">
+      <soap12:operation soapAction="urn:AddContainerBOM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerDropShipClient">
+      <soap12:operation soapAction="urn:UpdateCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDropShipClient">
+      <soap12:operation soapAction="urn:AddCustomerDropShipClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <soap12:operation soapAction="urn:UpdateVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCarrierAccount">
+      <soap12:operation soapAction="urn:AddCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomer">
+      <soap12:operation soapAction="urn:InquireCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntVendorOverride">
+      <soap12:operation soapAction="urn:UpdatePlntVendorOverride" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireEmployee">
+      <soap12:operation soapAction="urn:InquireEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTerritoryCode">
+      <soap12:operation soapAction="urn:InquireTerritoryCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerList">
+      <soap12:operation soapAction="urn:InquireCustomerList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerAssignment">
+      <soap12:operation soapAction="urn:DeleteContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerContact">
+      <soap12:operation soapAction="urn:InquireCustomerContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCarrierAccount">
+      <soap12:operation soapAction="urn:DeleteCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap12:operation soapAction="urn:AddCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReprintLabel">
+      <soap12:operation soapAction="urn:ReprintLabel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HoldUnholdSerial">
+      <soap12:operation soapAction="urn:HoldUnholdSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTermCode">
+      <soap12:operation soapAction="urn:InquireTermCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap12:operation soapAction="urn:DeleteEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCompany">
+      <soap12:operation soapAction="urn:InquireCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireShippingCarrierCode">
+      <soap12:operation soapAction="urn:InquireShippingCarrierCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateSerial">
+      <soap12:operation soapAction="urn:DeactivateSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateSerial">
+      <soap12:operation soapAction="urn:ActivateSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarrierAccount">
+      <soap12:operation soapAction="urn:UpdateCarrierAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainer">
+      <soap12:operation soapAction="urn:UpdateContainer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendorFFLNumber">
+      <soap12:operation soapAction="urn:InquireVendorFFLNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerBOM">
+      <soap12:operation soapAction="urn:UpdateContainerBOM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendor">
+      <soap12:operation soapAction="urn:DeleteVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerAssignment">
+      <soap12:operation soapAction="urn:AddContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerAssignment">
+      <soap12:operation soapAction="urn:InquireContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainer">
+      <soap12:operation soapAction="urn:DeleteContainer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap12:operation soapAction="urn:UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProjectCostCode">
+      <soap12:operation soapAction="urn:InquireProjectCostCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerAssignment">
+      <soap12:operation soapAction="urn:UpdateContainerAssignment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BuildToExistingMasterMix">
+      <soap12:operation soapAction="urn:BuildToExistingMasterMix" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <soap12:operation soapAction="urn:UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCreditVoucherReasonCode">
+      <soap12:operation soapAction="urn:InquireCreditVoucherReasonCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainer">
+      <soap12:operation soapAction="urn:InquireContainer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireSerialMaster">
+      <soap12:operation soapAction="urn:InquireSerialMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireSalesmanCode">
+      <soap12:operation soapAction="urn:InquireSalesmanCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ivpwsMAIN001HttpBinding" type="ns:ivpwsMAIN001PortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="InquireShipCarrierServiceCode">
+      <http:operation location="ivpwsMAIN001/InquireShipCarrierServiceCode" />
+      <wsdl:input>
+        <mime:content part="InquireShipCarrierServiceCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireShipCarrierServiceCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVendorFFLNumber">
+      <http:operation location="ivpwsMAIN001/AddVendorFFLNumber" />
+      <wsdl:input>
+        <mime:content part="AddVendorFFLNumber" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddVendorFFLNumber" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerDropShipClient">
+      <http:operation location="ivpwsMAIN001/DeleteCustomerDropShipClient" />
+      <wsdl:input>
+        <mime:content part="DeleteCustomerDropShipClient" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteCustomerDropShipClient" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntCustomerOverride">
+      <http:operation location="ivpwsMAIN001/AddPlntCustomerOverride" />
+      <wsdl:input>
+        <mime:content part="AddPlntCustomerOverride" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddPlntCustomerOverride" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerBOM">
+      <http:operation location="ivpwsMAIN001/InquireContainerBOM" />
+      <wsdl:input>
+        <mime:content part="InquireContainerBOM" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireContainerBOM" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntCustomerOverride">
+      <http:operation location="ivpwsMAIN001/UpdatePlntCustomerOverride" />
+      <wsdl:input>
+        <mime:content part="UpdatePlntCustomerOverride" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdatePlntCustomerOverride" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlntVendorOverride">
+      <http:operation location="ivpwsMAIN001/AddPlntVendorOverride" />
+      <wsdl:input>
+        <mime:content part="AddPlntVendorOverride" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddPlntVendorOverride" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSerializedInventoryTransaction">
+      <http:operation location="ivpwsMAIN001/AddSerializedInventoryTransaction" />
+      <wsdl:input>
+        <mime:content part="AddSerializedInventoryTransaction" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddSerializedInventoryTransaction" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorFFLNumber">
+      <http:operation location="ivpwsMAIN001/DeleteVendorFFLNumber" />
+      <wsdl:input>
+        <mime:content part="DeleteVendorFFLNumber" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteVendorFFLNumber" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerBOM">
+      <http:operation location="ivpwsMAIN001/DeleteContainerBOM" />
+      <wsdl:input>
+        <mime:content part="DeleteContainerBOM" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteContainerBOM" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTaxGroupRateCode">
+      <http:operation location="ivpwsMAIN001/InquireTaxGroupRateCode" />
+      <wsdl:input>
+        <mime:content part="InquireTaxGroupRateCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireTaxGroupRateCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorFFLNumber">
+      <http:operation location="ivpwsMAIN001/UpdateVendorFFLNumber" />
+      <wsdl:input>
+        <mime:content part="UpdateVendorFFLNumber" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateVendorFFLNumber" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerDropShipClient">
+      <http:operation location="ivpwsMAIN001/InquireCustomerDropShipClient" />
+      <wsdl:input>
+        <mime:content part="InquireCustomerDropShipClient" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireCustomerDropShipClient" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainer">
+      <http:operation location="ivpwsMAIN001/AddContainer" />
+      <wsdl:input>
+        <mime:content part="AddContainer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddContainer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <http:operation location="ivpwsMAIN001/AddEmployee" />
+      <wsdl:input>
+        <mime:content part="AddEmployee" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddEmployee" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntVendorOverride">
+      <http:operation location="ivpwsMAIN001/DeletePlntVendorOverride" />
+      <wsdl:input>
+        <mime:content part="DeletePlntVendorOverride" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeletePlntVendorOverride" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendor">
+      <http:operation location="ivpwsMAIN001/InquireVendor" />
+      <wsdl:input>
+        <mime:content part="InquireVendor" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireVendor" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePlntCustomerOverride">
+      <http:operation location="ivpwsMAIN001/InquirePlntCustomerOverride" />
+      <wsdl:input>
+        <mime:content part="InquirePlntCustomerOverride" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquirePlntCustomerOverride" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVendor">
+      <http:operation location="ivpwsMAIN001/AddVendor" />
+      <wsdl:input>
+        <mime:content part="AddVendor" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddVendor" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCarrierAccount">
+      <http:operation location="ivpwsMAIN001/InquireCarrierAccount" />
+      <wsdl:input>
+        <mime:content part="InquireCarrierAccount" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireCarrierAccount" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <http:operation location="ivpwsMAIN001/DeleteCustomer" />
+      <wsdl:input>
+        <mime:content part="DeleteCustomer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteCustomer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlntCustomerOverride">
+      <http:operation location="ivpwsMAIN001/DeletePlntCustomerOverride" />
+      <wsdl:input>
+        <mime:content part="DeletePlntCustomerOverride" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeletePlntCustomerOverride" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerBOM">
+      <http:operation location="ivpwsMAIN001/AddContainerBOM" />
+      <wsdl:input>
+        <mime:content part="AddContainerBOM" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddContainerBOM" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerDropShipClient">
+      <http:operation location="ivpwsMAIN001/UpdateCustomerDropShipClient" />
+      <wsdl:input>
+        <mime:content part="UpdateCustomerDropShipClient" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateCustomerDropShipClient" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDropShipClient">
+      <http:operation location="ivpwsMAIN001/AddCustomerDropShipClient" />
+      <wsdl:input>
+        <mime:content part="AddCustomerDropShipClient" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddCustomerDropShipClient" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <http:operation location="ivpwsMAIN001/UpdateVendor" />
+      <wsdl:input>
+        <mime:content part="UpdateVendor" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateVendor" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCarrierAccount">
+      <http:operation location="ivpwsMAIN001/AddCarrierAccount" />
+      <wsdl:input>
+        <mime:content part="AddCarrierAccount" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddCarrierAccount" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomer">
+      <http:operation location="ivpwsMAIN001/InquireCustomer" />
+      <wsdl:input>
+        <mime:content part="InquireCustomer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireCustomer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlntVendorOverride">
+      <http:operation location="ivpwsMAIN001/UpdatePlntVendorOverride" />
+      <wsdl:input>
+        <mime:content part="UpdatePlntVendorOverride" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdatePlntVendorOverride" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireEmployee">
+      <http:operation location="ivpwsMAIN001/InquireEmployee" />
+      <wsdl:input>
+        <mime:content part="InquireEmployee" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireEmployee" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTerritoryCode">
+      <http:operation location="ivpwsMAIN001/InquireTerritoryCode" />
+      <wsdl:input>
+        <mime:content part="InquireTerritoryCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireTerritoryCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerList">
+      <http:operation location="ivpwsMAIN001/InquireCustomerList" />
+      <wsdl:input>
+        <mime:content part="InquireCustomerList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireCustomerList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainerAssignment">
+      <http:operation location="ivpwsMAIN001/DeleteContainerAssignment" />
+      <wsdl:input>
+        <mime:content part="DeleteContainerAssignment" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteContainerAssignment" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCustomerContact">
+      <http:operation location="ivpwsMAIN001/InquireCustomerContact" />
+      <wsdl:input>
+        <mime:content part="InquireCustomerContact" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireCustomerContact" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCarrierAccount">
+      <http:operation location="ivpwsMAIN001/DeleteCarrierAccount" />
+      <wsdl:input>
+        <mime:content part="DeleteCarrierAccount" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteCarrierAccount" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <http:operation location="ivpwsMAIN001/AddCustomer" />
+      <wsdl:input>
+        <mime:content part="AddCustomer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddCustomer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprintLabel">
+      <http:operation location="ivpwsMAIN001/ReprintLabel" />
+      <wsdl:input>
+        <mime:content part="ReprintLabel" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="ReprintLabel" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HoldUnholdSerial">
+      <http:operation location="ivpwsMAIN001/HoldUnholdSerial" />
+      <wsdl:input>
+        <mime:content part="HoldUnholdSerial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="HoldUnholdSerial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireTermCode">
+      <http:operation location="ivpwsMAIN001/InquireTermCode" />
+      <wsdl:input>
+        <mime:content part="InquireTermCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireTermCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <http:operation location="ivpwsMAIN001/DeleteEmployee" />
+      <wsdl:input>
+        <mime:content part="DeleteEmployee" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteEmployee" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCompany">
+      <http:operation location="ivpwsMAIN001/InquireCompany" />
+      <wsdl:input>
+        <mime:content part="InquireCompany" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireCompany" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireShippingCarrierCode">
+      <http:operation location="ivpwsMAIN001/InquireShippingCarrierCode" />
+      <wsdl:input>
+        <mime:content part="InquireShippingCarrierCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireShippingCarrierCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateSerial">
+      <http:operation location="ivpwsMAIN001/DeactivateSerial" />
+      <wsdl:input>
+        <mime:content part="DeactivateSerial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeactivateSerial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateSerial">
+      <http:operation location="ivpwsMAIN001/ActivateSerial" />
+      <wsdl:input>
+        <mime:content part="ActivateSerial" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="ActivateSerial" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarrierAccount">
+      <http:operation location="ivpwsMAIN001/UpdateCarrierAccount" />
+      <wsdl:input>
+        <mime:content part="UpdateCarrierAccount" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateCarrierAccount" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainer">
+      <http:operation location="ivpwsMAIN001/UpdateContainer" />
+      <wsdl:input>
+        <mime:content part="UpdateContainer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateContainer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireVendorFFLNumber">
+      <http:operation location="ivpwsMAIN001/InquireVendorFFLNumber" />
+      <wsdl:input>
+        <mime:content part="InquireVendorFFLNumber" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireVendorFFLNumber" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerBOM">
+      <http:operation location="ivpwsMAIN001/UpdateContainerBOM" />
+      <wsdl:input>
+        <mime:content part="UpdateContainerBOM" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateContainerBOM" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendor">
+      <http:operation location="ivpwsMAIN001/DeleteVendor" />
+      <wsdl:input>
+        <mime:content part="DeleteVendor" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteVendor" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContainerAssignment">
+      <http:operation location="ivpwsMAIN001/AddContainerAssignment" />
+      <wsdl:input>
+        <mime:content part="AddContainerAssignment" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddContainerAssignment" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainerAssignment">
+      <http:operation location="ivpwsMAIN001/InquireContainerAssignment" />
+      <wsdl:input>
+        <mime:content part="InquireContainerAssignment" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireContainerAssignment" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainer">
+      <http:operation location="ivpwsMAIN001/DeleteContainer" />
+      <wsdl:input>
+        <mime:content part="DeleteContainer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteContainer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <http:operation location="ivpwsMAIN001/UpdateCustomer" />
+      <wsdl:input>
+        <mime:content part="UpdateCustomer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateCustomer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireProjectCostCode">
+      <http:operation location="ivpwsMAIN001/InquireProjectCostCode" />
+      <wsdl:input>
+        <mime:content part="InquireProjectCostCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireProjectCostCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContainerAssignment">
+      <http:operation location="ivpwsMAIN001/UpdateContainerAssignment" />
+      <wsdl:input>
+        <mime:content part="UpdateContainerAssignment" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateContainerAssignment" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuildToExistingMasterMix">
+      <http:operation location="ivpwsMAIN001/BuildToExistingMasterMix" />
+      <wsdl:input>
+        <mime:content part="BuildToExistingMasterMix" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="BuildToExistingMasterMix" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <http:operation location="ivpwsMAIN001/UpdateEmployee" />
+      <wsdl:input>
+        <mime:content part="UpdateEmployee" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateEmployee" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireCreditVoucherReasonCode">
+      <http:operation location="ivpwsMAIN001/InquireCreditVoucherReasonCode" />
+      <wsdl:input>
+        <mime:content part="InquireCreditVoucherReasonCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireCreditVoucherReasonCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireContainer">
+      <http:operation location="ivpwsMAIN001/InquireContainer" />
+      <wsdl:input>
+        <mime:content part="InquireContainer" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireContainer" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireSerialMaster">
+      <http:operation location="ivpwsMAIN001/InquireSerialMaster" />
+      <wsdl:input>
+        <mime:content part="InquireSerialMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireSerialMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireSalesmanCode">
+      <http:operation location="ivpwsMAIN001/InquireSalesmanCode" />
+      <wsdl:input>
+        <mime:content part="InquireSalesmanCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireSalesmanCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ivpwsMAIN001">
+    <wsdl:port name="ivpwsMAIN001HttpSoap11Endpoint" binding="ns:ivpwsMAIN001Soap11Binding">
+      <soap:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsMAIN001.ivpwsMAIN001HttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="ivpwsMAIN001HttpSoap12Endpoint" binding="ns:ivpwsMAIN001Soap12Binding">
+      <soap12:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsMAIN001.ivpwsMAIN001HttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="ivpwsMAIN001HttpEndpoint" binding="ns:ivpwsMAIN001HttpBinding">
+      <http:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsMAIN001.ivpwsMAIN001HttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

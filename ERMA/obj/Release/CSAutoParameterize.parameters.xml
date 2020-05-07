@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ERMA.Properties.Settings.WOW-Web.config Connection String" description="ERMA.Properties.Settings.WOW Connection String used in web.config by the application to access the database." defaultValue="Driver={Client Access ODBC Driver (32-bit)};system=172.16.1.51;uid=PCUTIL;dbq=CMSDATEDI TOYOTOMI WOW OIPAYFILES;dftpkglib=QGPL;languageid=ENU;pkg=QGPL/DEFAULT(IBM),2,0,1,0,512;qrystglmt=-1;cmt=0;nam=1;translate=1;ssl=0;signon=1;pwd=pcutil" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\TFS\ 2017\\Requisition\ System\\Code\\ERMA\\ERMA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ERMA.Properties.Settings.WOW']/@connectionString" />
+  </parameter>
+</parameters>

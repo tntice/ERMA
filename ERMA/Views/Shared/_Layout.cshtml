@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Requisition Management Application (ERMA)</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .Grid {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+            .Grid th {
+                background-color: #B8DBFD;
+                color: #333;
+                font-weight: bold;
+            }
+
+            .Grid th, .Grid td {
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .Grid img {
+                cursor: pointer;
+            }
+
+        .ChildGrid {
+            width: 100%;
+        }
+
+            .ChildGrid th {
+                background-color: #6C6C6C;
+                color: #fff;
+                font-weight: bold;
+            }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="~/Image/logoRGB-01.jpg" style="width:50px; height:50px;" />&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="navbar-header">
+                @Html.ActionLink("ERMA", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" id="fileDD" data-toggle="dropdown">Requisition File</a>
+                    <ul class="dropdown-menu">
+                        @*<li>@Html.ActionLink("New", "Create", "MReq", new { area = "" }, new { @class = "dropdown-item" }) </li>*@
+                        <li><a class="dropdown-item" href="#">Copy</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" id="attachmentsDD" data-toggle="dropdown">Attachments</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Upload</a></li>
+                        <li><a class="dropdown-item" href="#">Open</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" id="VendorsDD" data-toggle="dropdown">Vendors</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pending</a></li>
+                        <li><a class="dropdown-item" href="#">Update Requisitions</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" id="ProjectGroupsDD" data-toggle="dropdown">Project Groups</a>
+                    <ul class="dropdown-menu">
+                        @*<li><a class="dropdown-item" href="#">Project Groups</a></li>*@
+                        <li>@Html.ActionLink("Project Group Names", "Index", "ProjectGroup", new { area = "" }, new { @class = "dropdown-item" })</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <div class="nav navbar-nav navbar-right" id="txtLogin">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" style="color:white;">Welcome @Session["UserName"].ToString()</a></li>
+                </ul>
+            </div>
+
+            @*<form class="form-inline navbar-form navbar-right" action="/search.cshtml">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Search" />
+                    </div>
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>*@
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2 btn-group-vertical">
+            <button type="button" class="btn btn-primary">In-Work  @*@Html.Label("(0)", new { id = "InWorkCount" })*@</button>
+            <button type="button" class="btn btn-warning">Processing @*@Html.Label("(0)", new { id = "ProcessingCount" })*@</button>
+            <button type="button" class="btn btn-primary">@Html.ActionLink("Needs Approval", "Edit", "Route", new { area = "" }, new { @class = "dropdown-item", @style = "color:white;" }) @*@Html.Label("(0)", new { id = "NeedApprovalCount" })*@</button>
+            <button type="button" class="btn btn-success">Approved @*@Html.Label("(0)", new { id = "ApprovedCount" })*@</button>
+            <button type="button" class="btn btn-danger">Rejected @*@Html.Label("(0)", new { id = "RejectedCount" })*@</button>
+            <button type="button" class="btn btn-primary">Closed @*@Html.Label("(0)", new { id = "ClosedCount" })*@</button>
+            <br /><br />
+
+            <div id="PriceSummary" class="text-center" Style="display:@ViewBag.ShowPrice;">
+                <div id="LineItemPriceSummary" style="display:@ViewBag.ShowLineItemPrice;">
+                    <p>This Line Item Price</p>
+                    <div id="LineItemSummary" class="btn-group-vertical">
+                        <div id="LineItemBasePrice">Base: $10.00</div>
+                        <div id="LineItemTaxPrice">Tax: $0.60</div>
+                        <div id="LineItemTotal">Total: $10.60</div>
+                    </div>
+                    <br /><br />
+                </div>
+                <div id="TotalPriceSummary">
+                    <p>Master Requisition Price</p>
+                    <div id="TotalSummary" class="btn-group-vertical">
+                        <div id="TotalBasePrice">Base: $20.00</div>
+                        <div id="TotalTaxPrice">Tax: $1.20</div>
+                        <div id="TotalPrice">Total: $21.20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <div class="col-sm-12 body-content">
+                @RenderBody()
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid body-content">
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Electronic Requisition Management Application (ERMA)</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/formevents")
+    @Scripts.Render("~/bundles/webgridevents")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

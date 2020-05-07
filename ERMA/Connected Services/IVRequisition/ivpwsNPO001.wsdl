@@ -1,0 +1,1562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xsdns="http://webservices.solarsoft.com/ivp/xsd/ivpwsNPO001" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://webservices.solarsoft.com/ivp" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://webservices.solarsoft.com/ivp" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>ivpwsNPO001</wsdl:documentation>
+  <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservices.solarsoft.com/ivp/xsd/ivpwsNPO001">
+      <xs:include schemaLocation="http://172.16.1.51:8080/iVPWebServices/services/ivpwsNPO001?xsd=ivpwsNPO001.xsd" />
+      <xs:element name="AddAsn">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddAsn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddAsnResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPoRequisitionerCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddPoRequisitionerCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPoRequisitionerCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddProjectMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddProjectMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddProjectMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddProjectMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPOHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddPOHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPOHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddPOHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPOItem">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddPOItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPOItemResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddPOItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPORequisition">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddPORequisition" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPORequisitionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddPORequisition" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPORequsitionMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AddPORequsitionMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPORequsitionMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_AddPORequsitionMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AppendSupplierSerialToRfReceivingBatch">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_AppendSupplierSerialToRfReceivingBatch" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AppendSupplierSerialToRfReceivingBatchResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePoRequisitionerCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeletePoRequisitionerCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePoRequisitionerCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteProjectMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeleteProjectMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteProjectMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePOHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeletePOHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePOHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePOItem">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeletePOItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePOItemResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePORequisition">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeletePORequisition" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePORequisitionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePORequsitionMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_DeletePORequsitionMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePORequsitionMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCalendarYearReceivingHistories">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_GetCalendarYearReceivingHistories" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCalendarYearReceivingHistoriesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_GetCalendarYearReceivingHistories" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquirePoRequisitionerCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquirePoRequisitionerCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquirePoRequisitionerCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquirePoRequisitionerCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProjectMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireProjectMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireProjectMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireProjectMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquirePOApprovalStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquirePOApprovalStatus" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquirePOApprovalStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquirePOApprovalStatus" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireReceivingHistory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_InquireReceivingHistory" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InquireReceivingHistoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse_InquireReceivingHistory" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SendPOPrint">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_SendPOPrint" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SendPOPrintResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePoRequisitionerCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdatePoRequisitionerCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePoRequisitionerCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateProjectMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdateProjectMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateProjectMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePOHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdatePOHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePOHeaderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePOItem">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdatePOItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePOItemResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePORequisition">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdatePORequisition" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePORequisitionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePORequsitionMaster">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:Service_UpdatePORequsitionMaster" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePORequsitionMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ServerFaultResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xsdns:CMS_ServiceResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Service_InquireProjectMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireProjectMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireProjectMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireProjectMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServerFault">
+    <wsdl:part name="detail" element="xsdns:ServerFaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPoRequisitionerCode_Request">
+    <wsdl:part name="parameters" element="xsdns:AddPoRequisitionerCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPoRequisitionerCode_Response">
+    <wsdl:part name="parameters" element="xsdns:AddPoRequisitionerCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePOItem_Request">
+    <wsdl:part name="parameters" element="xsdns:DeletePOItem" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePOItem_Response">
+    <wsdl:part name="parameters" element="xsdns:DeletePOItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPORequisition_Request">
+    <wsdl:part name="parameters" element="xsdns:AddPORequisition" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPORequisition_Response">
+    <wsdl:part name="parameters" element="xsdns:AddPORequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquirePoRequisitionerCode_Request">
+    <wsdl:part name="parameters" element="xsdns:InquirePoRequisitionerCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquirePoRequisitionerCode_Response">
+    <wsdl:part name="parameters" element="xsdns:InquirePoRequisitionerCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePOHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:DeletePOHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePOHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:DeletePOHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetCalendarYearReceivingHistories_Request">
+    <wsdl:part name="parameters" element="xsdns:GetCalendarYearReceivingHistories" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetCalendarYearReceivingHistories_Response">
+    <wsdl:part name="parameters" element="xsdns:GetCalendarYearReceivingHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPOItem_Request">
+    <wsdl:part name="parameters" element="xsdns:AddPOItem" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPOItem_Response">
+    <wsdl:part name="parameters" element="xsdns:AddPOItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePOItem_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdatePOItem" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePOItem_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdatePOItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePOHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdatePOHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePOHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdatePOHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddProjectMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:AddProjectMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddProjectMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:AddProjectMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AppendSupplierSerialToRfReceivingBatch_Request">
+    <wsdl:part name="parameters" element="xsdns:AppendSupplierSerialToRfReceivingBatch" />
+  </wsdl:message>
+  <wsdl:message name="Service_AppendSupplierSerialToRfReceivingBatch_Response">
+    <wsdl:part name="parameters" element="xsdns:AppendSupplierSerialToRfReceivingBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddAsn_Request">
+    <wsdl:part name="parameters" element="xsdns:AddAsn" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddAsn_Response">
+    <wsdl:part name="parameters" element="xsdns:AddAsnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireReceivingHistory_Request">
+    <wsdl:part name="parameters" element="xsdns:InquireReceivingHistory" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquireReceivingHistory_Response">
+    <wsdl:part name="parameters" element="xsdns:InquireReceivingHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateProjectMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdateProjectMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdateProjectMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdateProjectMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePORequsitionMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:DeletePORequsitionMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePORequsitionMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:DeletePORequsitionMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquirePOApprovalStatus_Request">
+    <wsdl:part name="parameters" element="xsdns:InquirePOApprovalStatus" />
+  </wsdl:message>
+  <wsdl:message name="Service_InquirePOApprovalStatus_Response">
+    <wsdl:part name="parameters" element="xsdns:InquirePOApprovalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePORequsitionMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdatePORequsitionMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePORequsitionMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdatePORequsitionMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePORequisition_Request">
+    <wsdl:part name="parameters" element="xsdns:DeletePORequisition" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePORequisition_Response">
+    <wsdl:part name="parameters" element="xsdns:DeletePORequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_SendPOPrint_Request">
+    <wsdl:part name="parameters" element="xsdns:SendPOPrint" />
+  </wsdl:message>
+  <wsdl:message name="Service_SendPOPrint_Response">
+    <wsdl:part name="parameters" element="xsdns:SendPOPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePoRequisitionerCode_Request">
+    <wsdl:part name="parameters" element="xsdns:DeletePoRequisitionerCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeletePoRequisitionerCode_Response">
+    <wsdl:part name="parameters" element="xsdns:DeletePoRequisitionerCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePORequisition_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdatePORequisition" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePORequisition_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdatePORequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPOHeader_Request">
+    <wsdl:part name="parameters" element="xsdns:AddPOHeader" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPOHeader_Response">
+    <wsdl:part name="parameters" element="xsdns:AddPOHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePoRequisitionerCode_Request">
+    <wsdl:part name="parameters" element="xsdns:UpdatePoRequisitionerCode" />
+  </wsdl:message>
+  <wsdl:message name="Service_UpdatePoRequisitionerCode_Response">
+    <wsdl:part name="parameters" element="xsdns:UpdatePoRequisitionerCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteProjectMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:DeleteProjectMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_DeleteProjectMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:DeleteProjectMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPORequsitionMaster_Request">
+    <wsdl:part name="parameters" element="xsdns:AddPORequsitionMaster" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddPORequsitionMaster_Response">
+    <wsdl:part name="parameters" element="xsdns:AddPORequsitionMasterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ivpwsNPO001PortType">
+    <wsdl:operation name="InquireProjectMaster">
+      <wsdl:input wsaw:Action="urn:InquireProjectMaster" message="ns:Service_InquireProjectMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireProjectMaster_Response" message="ns:Service_InquireProjectMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireProjectMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPoRequisitionerCode">
+      <wsdl:input wsaw:Action="urn:AddPoRequisitionerCode" message="ns:Service_AddPoRequisitionerCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddPoRequisitionerCode_Response" message="ns:Service_AddPoRequisitionerCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddPoRequisitionerCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOItem">
+      <wsdl:input wsaw:Action="urn:DeletePOItem" message="ns:Service_DeletePOItem_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeletePOItem_Response" message="ns:Service_DeletePOItem_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeletePOItem_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequisition">
+      <wsdl:input wsaw:Action="urn:AddPORequisition" message="ns:Service_AddPORequisition_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddPORequisition_Response" message="ns:Service_AddPORequisition_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddPORequisition_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquirePoRequisitionerCode">
+      <wsdl:input wsaw:Action="urn:InquirePoRequisitionerCode" message="ns:Service_InquirePoRequisitionerCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquirePoRequisitionerCode_Response" message="ns:Service_InquirePoRequisitionerCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquirePoRequisitionerCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOHeader">
+      <wsdl:input wsaw:Action="urn:DeletePOHeader" message="ns:Service_DeletePOHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeletePOHeader_Response" message="ns:Service_DeletePOHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeletePOHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarYearReceivingHistories">
+      <wsdl:input wsaw:Action="urn:GetCalendarYearReceivingHistories" message="ns:Service_GetCalendarYearReceivingHistories_Request" />
+      <wsdl:output wsaw:Action="urn:Service_GetCalendarYearReceivingHistories_Response" message="ns:Service_GetCalendarYearReceivingHistories_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_GetCalendarYearReceivingHistories_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPOItem">
+      <wsdl:input wsaw:Action="urn:AddPOItem" message="ns:Service_AddPOItem_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddPOItem_Response" message="ns:Service_AddPOItem_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddPOItem_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOItem">
+      <wsdl:input wsaw:Action="urn:UpdatePOItem" message="ns:Service_UpdatePOItem_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdatePOItem_Response" message="ns:Service_UpdatePOItem_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdatePOItem_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOHeader">
+      <wsdl:input wsaw:Action="urn:UpdatePOHeader" message="ns:Service_UpdatePOHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdatePOHeader_Response" message="ns:Service_UpdatePOHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdatePOHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectMaster">
+      <wsdl:input wsaw:Action="urn:AddProjectMaster" message="ns:Service_AddProjectMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddProjectMaster_Response" message="ns:Service_AddProjectMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddProjectMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AppendSupplierSerialToRfReceivingBatch">
+      <wsdl:input wsaw:Action="urn:AppendSupplierSerialToRfReceivingBatch" message="ns:Service_AppendSupplierSerialToRfReceivingBatch_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AppendSupplierSerialToRfReceivingBatch_Response" message="ns:Service_AppendSupplierSerialToRfReceivingBatch_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AppendSupplierSerialToRfReceivingBatch_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAsn">
+      <wsdl:input wsaw:Action="urn:AddAsn" message="ns:Service_AddAsn_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddAsn_Response" message="ns:Service_AddAsn_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddAsn_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireReceivingHistory">
+      <wsdl:input wsaw:Action="urn:InquireReceivingHistory" message="ns:Service_InquireReceivingHistory_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquireReceivingHistory_Response" message="ns:Service_InquireReceivingHistory_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquireReceivingHistory_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectMaster">
+      <wsdl:input wsaw:Action="urn:UpdateProjectMaster" message="ns:Service_UpdateProjectMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdateProjectMaster_Response" message="ns:Service_UpdateProjectMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdateProjectMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequsitionMaster">
+      <wsdl:input wsaw:Action="urn:DeletePORequsitionMaster" message="ns:Service_DeletePORequsitionMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeletePORequsitionMaster_Response" message="ns:Service_DeletePORequsitionMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeletePORequsitionMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="InquirePOApprovalStatus">
+      <wsdl:input wsaw:Action="urn:InquirePOApprovalStatus" message="ns:Service_InquirePOApprovalStatus_Request" />
+      <wsdl:output wsaw:Action="urn:Service_InquirePOApprovalStatus_Response" message="ns:Service_InquirePOApprovalStatus_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_InquirePOApprovalStatus_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequsitionMaster">
+      <wsdl:input wsaw:Action="urn:UpdatePORequsitionMaster" message="ns:Service_UpdatePORequsitionMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdatePORequsitionMaster_Response" message="ns:Service_UpdatePORequsitionMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdatePORequsitionMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequisition">
+      <wsdl:input wsaw:Action="urn:DeletePORequisition" message="ns:Service_DeletePORequisition_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeletePORequisition_Response" message="ns:Service_DeletePORequisition_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeletePORequisition_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPOPrint">
+      <wsdl:input wsaw:Action="urn:SendPOPrint" message="ns:Service_SendPOPrint_Request" />
+      <wsdl:output wsaw:Action="urn:Service_SendPOPrint_Response" message="ns:Service_SendPOPrint_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_SendPOPrint_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoRequisitionerCode">
+      <wsdl:input wsaw:Action="urn:DeletePoRequisitionerCode" message="ns:Service_DeletePoRequisitionerCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeletePoRequisitionerCode_Response" message="ns:Service_DeletePoRequisitionerCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeletePoRequisitionerCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequisition">
+      <wsdl:input wsaw:Action="urn:UpdatePORequisition" message="ns:Service_UpdatePORequisition_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdatePORequisition_Response" message="ns:Service_UpdatePORequisition_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdatePORequisition_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPOHeader">
+      <wsdl:input wsaw:Action="urn:AddPOHeader" message="ns:Service_AddPOHeader_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddPOHeader_Response" message="ns:Service_AddPOHeader_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddPOHeader_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoRequisitionerCode">
+      <wsdl:input wsaw:Action="urn:UpdatePoRequisitionerCode" message="ns:Service_UpdatePoRequisitionerCode_Request" />
+      <wsdl:output wsaw:Action="urn:Service_UpdatePoRequisitionerCode_Response" message="ns:Service_UpdatePoRequisitionerCode_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_UpdatePoRequisitionerCode_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProjectMaster">
+      <wsdl:input wsaw:Action="urn:DeleteProjectMaster" message="ns:Service_DeleteProjectMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_DeleteProjectMaster_Response" message="ns:Service_DeleteProjectMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_DeleteProjectMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequsitionMaster">
+      <wsdl:input wsaw:Action="urn:AddPORequsitionMaster" message="ns:Service_AddPORequsitionMaster_Request" />
+      <wsdl:output wsaw:Action="urn:Service_AddPORequsitionMaster_Response" message="ns:Service_AddPORequsitionMaster_Response" />
+      <wsdl:fault wsaw:Action="urn:Service_AddPORequsitionMaster_ServerFault" name="ServerFault" message="ns:ServerFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ivpwsNPO001Soap11Binding" type="ns:ivpwsNPO001PortType">
+    <wsp:PolicyReference URI="#UsernameToken" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InquireProjectMaster">
+      <soap:operation soapAction="urn:InquireProjectMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoRequisitionerCode">
+      <soap:operation soapAction="urn:AddPoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOItem">
+      <soap:operation soapAction="urn:DeletePOItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequisition">
+      <soap:operation soapAction="urn:AddPORequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePoRequisitionerCode">
+      <soap:operation soapAction="urn:InquirePoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOHeader">
+      <soap:operation soapAction="urn:DeletePOHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarYearReceivingHistories">
+      <soap:operation soapAction="urn:GetCalendarYearReceivingHistories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPOItem">
+      <soap:operation soapAction="urn:AddPOItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOItem">
+      <soap:operation soapAction="urn:UpdatePOItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOHeader">
+      <soap:operation soapAction="urn:UpdatePOHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectMaster">
+      <soap:operation soapAction="urn:AddProjectMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AppendSupplierSerialToRfReceivingBatch">
+      <soap:operation soapAction="urn:AppendSupplierSerialToRfReceivingBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddAsn">
+      <soap:operation soapAction="urn:AddAsn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireReceivingHistory">
+      <soap:operation soapAction="urn:InquireReceivingHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectMaster">
+      <soap:operation soapAction="urn:UpdateProjectMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequsitionMaster">
+      <soap:operation soapAction="urn:DeletePORequsitionMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePOApprovalStatus">
+      <soap:operation soapAction="urn:InquirePOApprovalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequsitionMaster">
+      <soap:operation soapAction="urn:UpdatePORequsitionMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequisition">
+      <soap:operation soapAction="urn:DeletePORequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendPOPrint">
+      <soap:operation soapAction="urn:SendPOPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoRequisitionerCode">
+      <soap:operation soapAction="urn:DeletePoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequisition">
+      <soap:operation soapAction="urn:UpdatePORequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPOHeader">
+      <soap:operation soapAction="urn:AddPOHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoRequisitionerCode">
+      <soap:operation soapAction="urn:UpdatePoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProjectMaster">
+      <soap:operation soapAction="urn:DeleteProjectMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequsitionMaster">
+      <soap:operation soapAction="urn:AddPORequsitionMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ivpwsNPO001Soap12Binding" type="ns:ivpwsNPO001PortType">
+    <wsp:PolicyReference URI="#UsernameToken" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InquireProjectMaster">
+      <soap12:operation soapAction="urn:InquireProjectMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoRequisitionerCode">
+      <soap12:operation soapAction="urn:AddPoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOItem">
+      <soap12:operation soapAction="urn:DeletePOItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequisition">
+      <soap12:operation soapAction="urn:AddPORequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePoRequisitionerCode">
+      <soap12:operation soapAction="urn:InquirePoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOHeader">
+      <soap12:operation soapAction="urn:DeletePOHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarYearReceivingHistories">
+      <soap12:operation soapAction="urn:GetCalendarYearReceivingHistories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPOItem">
+      <soap12:operation soapAction="urn:AddPOItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOItem">
+      <soap12:operation soapAction="urn:UpdatePOItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOHeader">
+      <soap12:operation soapAction="urn:UpdatePOHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectMaster">
+      <soap12:operation soapAction="urn:AddProjectMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AppendSupplierSerialToRfReceivingBatch">
+      <soap12:operation soapAction="urn:AppendSupplierSerialToRfReceivingBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddAsn">
+      <soap12:operation soapAction="urn:AddAsn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireReceivingHistory">
+      <soap12:operation soapAction="urn:InquireReceivingHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectMaster">
+      <soap12:operation soapAction="urn:UpdateProjectMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequsitionMaster">
+      <soap12:operation soapAction="urn:DeletePORequsitionMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePOApprovalStatus">
+      <soap12:operation soapAction="urn:InquirePOApprovalStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequsitionMaster">
+      <soap12:operation soapAction="urn:UpdatePORequsitionMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequisition">
+      <soap12:operation soapAction="urn:DeletePORequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendPOPrint">
+      <soap12:operation soapAction="urn:SendPOPrint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoRequisitionerCode">
+      <soap12:operation soapAction="urn:DeletePoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequisition">
+      <soap12:operation soapAction="urn:UpdatePORequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPOHeader">
+      <soap12:operation soapAction="urn:AddPOHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoRequisitionerCode">
+      <soap12:operation soapAction="urn:UpdatePoRequisitionerCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProjectMaster">
+      <soap12:operation soapAction="urn:DeleteProjectMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequsitionMaster">
+      <soap12:operation soapAction="urn:AddPORequsitionMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServerFault">
+        <soap12:fault use="literal" name="ServerFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ivpwsNPO001HttpBinding" type="ns:ivpwsNPO001PortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="InquireProjectMaster">
+      <http:operation location="ivpwsNPO001/InquireProjectMaster" />
+      <wsdl:input>
+        <mime:content part="InquireProjectMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireProjectMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoRequisitionerCode">
+      <http:operation location="ivpwsNPO001/AddPoRequisitionerCode" />
+      <wsdl:input>
+        <mime:content part="AddPoRequisitionerCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddPoRequisitionerCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOItem">
+      <http:operation location="ivpwsNPO001/DeletePOItem" />
+      <wsdl:input>
+        <mime:content part="DeletePOItem" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeletePOItem" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequisition">
+      <http:operation location="ivpwsNPO001/AddPORequisition" />
+      <wsdl:input>
+        <mime:content part="AddPORequisition" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddPORequisition" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePoRequisitionerCode">
+      <http:operation location="ivpwsNPO001/InquirePoRequisitionerCode" />
+      <wsdl:input>
+        <mime:content part="InquirePoRequisitionerCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquirePoRequisitionerCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOHeader">
+      <http:operation location="ivpwsNPO001/DeletePOHeader" />
+      <wsdl:input>
+        <mime:content part="DeletePOHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeletePOHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarYearReceivingHistories">
+      <http:operation location="ivpwsNPO001/GetCalendarYearReceivingHistories" />
+      <wsdl:input>
+        <mime:content part="GetCalendarYearReceivingHistories" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="GetCalendarYearReceivingHistories" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPOItem">
+      <http:operation location="ivpwsNPO001/AddPOItem" />
+      <wsdl:input>
+        <mime:content part="AddPOItem" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddPOItem" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOItem">
+      <http:operation location="ivpwsNPO001/UpdatePOItem" />
+      <wsdl:input>
+        <mime:content part="UpdatePOItem" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdatePOItem" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOHeader">
+      <http:operation location="ivpwsNPO001/UpdatePOHeader" />
+      <wsdl:input>
+        <mime:content part="UpdatePOHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdatePOHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectMaster">
+      <http:operation location="ivpwsNPO001/AddProjectMaster" />
+      <wsdl:input>
+        <mime:content part="AddProjectMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddProjectMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendSupplierSerialToRfReceivingBatch">
+      <http:operation location="ivpwsNPO001/AppendSupplierSerialToRfReceivingBatch" />
+      <wsdl:input>
+        <mime:content part="AppendSupplierSerialToRfReceivingBatch" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AppendSupplierSerialToRfReceivingBatch" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAsn">
+      <http:operation location="ivpwsNPO001/AddAsn" />
+      <wsdl:input>
+        <mime:content part="AddAsn" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddAsn" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquireReceivingHistory">
+      <http:operation location="ivpwsNPO001/InquireReceivingHistory" />
+      <wsdl:input>
+        <mime:content part="InquireReceivingHistory" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquireReceivingHistory" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectMaster">
+      <http:operation location="ivpwsNPO001/UpdateProjectMaster" />
+      <wsdl:input>
+        <mime:content part="UpdateProjectMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdateProjectMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequsitionMaster">
+      <http:operation location="ivpwsNPO001/DeletePORequsitionMaster" />
+      <wsdl:input>
+        <mime:content part="DeletePORequsitionMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeletePORequsitionMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquirePOApprovalStatus">
+      <http:operation location="ivpwsNPO001/InquirePOApprovalStatus" />
+      <wsdl:input>
+        <mime:content part="InquirePOApprovalStatus" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="InquirePOApprovalStatus" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequsitionMaster">
+      <http:operation location="ivpwsNPO001/UpdatePORequsitionMaster" />
+      <wsdl:input>
+        <mime:content part="UpdatePORequsitionMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdatePORequsitionMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePORequisition">
+      <http:operation location="ivpwsNPO001/DeletePORequisition" />
+      <wsdl:input>
+        <mime:content part="DeletePORequisition" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeletePORequisition" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPOPrint">
+      <http:operation location="ivpwsNPO001/SendPOPrint" />
+      <wsdl:input>
+        <mime:content part="SendPOPrint" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="SendPOPrint" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoRequisitionerCode">
+      <http:operation location="ivpwsNPO001/DeletePoRequisitionerCode" />
+      <wsdl:input>
+        <mime:content part="DeletePoRequisitionerCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeletePoRequisitionerCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePORequisition">
+      <http:operation location="ivpwsNPO001/UpdatePORequisition" />
+      <wsdl:input>
+        <mime:content part="UpdatePORequisition" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdatePORequisition" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPOHeader">
+      <http:operation location="ivpwsNPO001/AddPOHeader" />
+      <wsdl:input>
+        <mime:content part="AddPOHeader" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddPOHeader" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoRequisitionerCode">
+      <http:operation location="ivpwsNPO001/UpdatePoRequisitionerCode" />
+      <wsdl:input>
+        <mime:content part="UpdatePoRequisitionerCode" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="UpdatePoRequisitionerCode" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProjectMaster">
+      <http:operation location="ivpwsNPO001/DeleteProjectMaster" />
+      <wsdl:input>
+        <mime:content part="DeleteProjectMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="DeleteProjectMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPORequsitionMaster">
+      <http:operation location="ivpwsNPO001/AddPORequsitionMaster" />
+      <wsdl:input>
+        <mime:content part="AddPORequsitionMaster" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="AddPORequsitionMaster" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ivpwsNPO001">
+    <wsdl:port name="ivpwsNPO001HttpSoap11Endpoint" binding="ns:ivpwsNPO001Soap11Binding">
+      <soap:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsNPO001.ivpwsNPO001HttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="ivpwsNPO001HttpSoap12Endpoint" binding="ns:ivpwsNPO001Soap12Binding">
+      <soap12:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsNPO001.ivpwsNPO001HttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="ivpwsNPO001HttpEndpoint" binding="ns:ivpwsNPO001HttpBinding">
+      <http:address location="http://172.16.1.51:8080/iVPWebServices/services/ivpwsNPO001.ivpwsNPO001HttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

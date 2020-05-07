@@ -1,0 +1,196 @@
+﻿@model ERMA.Models.MasterRequisition
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    textarea.form-control {
+        /*width: 400px !important;
+        max-width: 400px;
+        min-width: 400px;*/
+        height: 175px;
+    }
+
+    #lblGL {
+        font-weight: 100;
+    }
+
+    #lblProject {
+        font-weight: 100;
+    }
+
+    #txtnote {
+        width: 800px !important;
+        max-width: 800px;
+        min-width: 400px;
+        height: 175px;
+    }
+
+    #txtPurpose {
+        width: 800px !important;
+        max-width: 800px;
+        min-width: 400px;
+        height: 80px;
+    }
+
+    #txtReason {
+        width: 800px !important;
+        max-width: 800px;
+        min-width: 400px
+    }
+</style>
+<h2>Create</h2>
+
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Master Requisition</h4>
+        @*<hr />*@
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="well">
+            <div class="form-group">
+
+                <div class="col-md-12">
+
+                    @Html.HiddenFor(model => model.MasterReqID)
+                    @Html.HiddenFor(model => model.Description3)
+                    @Html.HiddenFor(model => model.CMSDatabase)
+                    @Html.HiddenFor(model => model.ServLang)
+                    @Html.HiddenFor(model => model.ServPlntCode)
+                    @Html.HiddenFor(model => model.RequestID)
+                    @Html.HiddenFor(model => model.RequestMode)
+                    @Html.HiddenFor(model => model.MasterReqNbrSpecified)
+                    @Html.HiddenFor(model => model.Buyer)
+                    @Html.HiddenFor(model => model.Requisitioner)
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    @Html.LabelFor(model => model.Description1, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+                </div>
+                <div class="col-md-3">
+                    @Html.EditorFor(model => model.Description1, new { htmlAttributes = new { @class = "form-control", @autofocus = "autofocus" } })
+                    @Html.ValidationMessageFor(model => model.Description1, "", new { @class = "text-danger" })
+                </div>
+                @Html.LabelFor(model => model.Description2, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.Description2, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Description2, "", new { @class = "text-danger" })
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.CommodityCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-3">
+
+                    @Html.EditorFor(model => model.CommodityCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CommodityCode, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-md-1 text-right">
+                    @Html.LabelFor(model => model.VendorCode, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+                </div>
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.VendorCode, new { htmlAttributes = new { @class = "form-control", id = "txtVendorCode" } })
+                    @Html.ValidationMessageFor(model => model.VendorCode, "", new { @class = "text-danger" })
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#getVendor">Select</button>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.HowShipped, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-3">
+                    @Html.EditorFor(model => model.HowShipped, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.HowShipped, "", new { @class = "text-danger" })
+                </div>
+                @Html.LabelFor(model => model.QuoteNumber, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.QuoteNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.QuoteNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    @Html.LabelFor(model => model.Reason, htmlAttributes: new { @class = "control-label" })<span style="color:red;">&nbsp;*</span>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Reason, new { htmlAttributes = new { @class = "form-control", id = "txtReason" } })
+                    @Html.ValidationMessageFor(model => model.Reason, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Purpose, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Purpose, htmlAttributes: new { @class = "form-control", rows = "5", cols = "50", id = "txtPurpose" })
+                    @Html.ValidationMessageFor(model => model.Purpose, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Notes, htmlAttributes: new { @class = "form-control", rows = "10", cols = "150", id = "txtnote" })
+                    @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" id="btnMasterReqSubmit" />
+            </div>
+        </div>
+    </div>
+
+    <div id="getVendor" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <h4 class="modal-title text-center">Search Vendor</h4>
+
+                <div class="modal-body">
+                    <p class="text-center" id="lblSearch">Type Search</p>
+                    <div class="row" id="lblSearchVendor">
+                        <input type="text" id="txtSearchVendor" class="form-control text-center col-lg-6 col-md-offset-3" />
+                    </div>
+                    <div>
+                        <br />
+                        <div class="row">
+                            <p class="text-center">Results</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            @if (!(Model is null))
+                            {
+                                @Html.DropDownListFor(model => model.SelectedVendorCode, new SelectList(Model.VendorList, "VendorCode", "VendorDisplay"), htmlAttributes: new { @class = "form-control text-left col-lg-6, col-md-offset-3", id = "lstVendorSearchResults", size = "8" })
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnSelectVendor" class="btn btn-default" data-dismiss="modal">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Home")
+</div>
